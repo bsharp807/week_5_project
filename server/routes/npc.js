@@ -18,6 +18,12 @@ router.get('/:id', function(req, res) {
     });
 });
 
-
+//CREATE JSON FILE
+router.get('/orc', function(req, res) {
+  SqlRunner.run('SELECT * FROM orc_male_names')
+    .then((name) => {
+      res.status(200).json(name.rows)
+    })
+})
 
 module.exports = router;

@@ -71,3 +71,7 @@ INSERT INTO skills (skill) VALUES ('Constitution');
 INSERT INTO skills (skill) VALUES ('Intelligence');
 INSERT INTO skills (skill) VALUES ('Wisdom');
 INSERT INTO skills (skill) VALUES ('Charisma');
+
+-- TESTS
+
+SELECT * FROM orc_male_names
