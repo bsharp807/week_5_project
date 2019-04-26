@@ -2,11 +2,22 @@ var express = require('express');
 var router = express.Router();
 var SqlRunner = require('../db/sql_runner');
 
-/* GET home page. */
+// Create JSON
 router.get('/', function(req, res) {
-  SqlRunner.run('SELECT * FROM orc_male_names')
+  const allData = {}
+  SqlRunner.run('SELECT * FROM orc_names')
     .then((name) => {
-      res.status(200).json(name.rows)
+      allData.names = name.rows;
+      SqlRunner.run('SELECT * FROM jobs')
+        .then((job) => {
+          allData.jobs = job.rows;
+          SqlRunner.run('SELECT * FROM skills')
+            .then((skill) => {
+              allData.skills = skill.rows;
+              SqlRunner.run('SELECT * FROM ')
+              res.status(200).json(allData);
+            })
+        })
     })
 })
 

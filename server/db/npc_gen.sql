@@ -1,6 +1,5 @@
 DROP TABLE non_player_chars;
-DROP TABLE orc_male_names;
-DROP TABLE orc_female_names;
+DROP TABLE orc_names;
 DROP TABLE jobs;
 DROP TABLE skills;
 DROP TABLE traits;
@@ -17,7 +16,7 @@ CREATE TABLE non_player_chars(
   trait VARCHAR(1024)
 );
 
-CREATE TABLE orc_male_names(
+CREATE TABLE orc_names(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
@@ -49,11 +48,11 @@ INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill,
 
 -- ORC MALE NAMES
 
-INSERT INTO orc_male_names (name) VALUES ('Gromsh');
-INSERT INTO orc_male_names (name) VALUES ('Gorge');
-INSERT INTO orc_male_names (name) VALUES ('Frunks');
-INSERT INTO orc_male_names (name) VALUES ('Ozymandiork');
-INSERT INTO orc_male_names (name) VALUES ('Arkus');
+INSERT INTO orc_names (name) VALUES ('Gromsh');
+INSERT INTO orc_names (name) VALUES ('Gorge');
+INSERT INTO orc_names (name) VALUES ('Frunks');
+INSERT INTO orc_names (name) VALUES ('Ozymandiork');
+INSERT INTO orc_names (name) VALUES ('Arkus');
 
 -- JOBS
 
@@ -73,5 +72,3 @@ INSERT INTO skills (skill) VALUES ('Wisdom');
 INSERT INTO skills (skill) VALUES ('Charisma');
 
 -- TESTS
-
-SELECT * FROM orc_male_names
