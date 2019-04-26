@@ -42,5 +42,32 @@ CREATE TABLE traits(
   trait VARCHAR(255)
 );
 
+-- INITIAL NPC
+
 INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill, trait)
   VALUES ('Krunk', 'Grimmjow', 'Orc', 'Barbarian', '23', 'Strength', 'Intelligence', 'External extra jaw');
+
+-- ORC MALE NAMES
+
+INSERT INTO orc_male_names (name) VALUES ('Gromsh');
+INSERT INTO orc_male_names (name) VALUES ('Gorge');
+INSERT INTO orc_male_names (name) VALUES ('Frunks');
+INSERT INTO orc_male_names (name) VALUES ('Ozymandiork');
+INSERT INTO orc_male_names (name) VALUES ('Arkus');
+
+-- JOBS
+
+INSERT INTO jobs (job) VALUES ('Barbarian');
+INSERT INTO jobs (job) VALUES ('Wizard');
+INSERT INTO jobs (job) VALUES ('Rogue');
+INSERT INTO jobs (job) VALUES ('Cleric');
+INSERT INTO jobs (job) VALUES ('Ranger');
+
+-- SKILLS
+
+INSERT INTO skills (skill) VALUES ('Strength');
+INSERT INTO skills (skill) VALUES ('Dexterity');
+INSERT INTO skills (skill) VALUES ('Constitution');
+INSERT INTO skills (skill) VALUES ('Intelligence');
+INSERT INTO skills (skill) VALUES ('Wisdom');
+INSERT INTO skills (skill) VALUES ('Charisma');
