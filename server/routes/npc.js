@@ -26,4 +26,26 @@ router.get('/orc', function(req, res) {
     })
 })
 
+//ADD character
+router.post('/', function(req, res) {
+  SqlRunner.run('INSERT INTO non_player_chars (first_name, job, age, high_skill, low_skill) VALUES ($1, $2, $3, $4, $5)', [req.body.name, req.body.job, req.body.age, req.body.highSkill, req.body.lowSkill])
+    .then((result) => {
+      SqlRunner.run('SELECT * FROM non_player_chars')
+        .then((result) => {
+          res.status(201).json(result.rows)
+        })
+    })
+})
+
+//UPDATE single character
+router.put('/:id', function(req, res) {
+  SqlRunner.run('UPDATE non_player_chars SET first_name = $1, job = $3 where id = $2', [req.body.name, req.params.id, req.body.job])
+    .then((name) => {
+      SqlRunner.run('SELECT * FROM non_player_chars')
+        .then((result) => {
+          res.status(201).json(result.rows)
+        })
+    })
+})
+
 module.exports = router;

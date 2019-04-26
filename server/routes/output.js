@@ -14,7 +14,6 @@ router.get('/', function(req, res) {
           SqlRunner.run('SELECT * FROM skills')
             .then((skill) => {
               allData.skills = skill.rows;
-              SqlRunner.run('SELECT * FROM ')
               res.status(200).json(allData);
             })
         })
