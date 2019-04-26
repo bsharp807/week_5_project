@@ -6,7 +6,7 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/npc');
+var npcRouter = require('./routes/npc');
 
 var app = express();
 
