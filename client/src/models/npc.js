@@ -15,7 +15,7 @@ class NPC {
     request.get()
       .then((data) => {
         this.data = data;
-        PubSub.publish('NPC:initial-data-ready');
+        PubSub.publish('NPC:initial-data-ready', this.data[0]);
       })
   }
 
