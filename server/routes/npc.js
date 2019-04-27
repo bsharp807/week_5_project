@@ -18,7 +18,7 @@ router.get('/:id', function(req, res) {
     });
 });
 
-//CREATE JSON FILE
+//CREATE JSON FILE -- DOES NOT WORK
 router.get('/orc', function(req, res) {
   SqlRunner.run('SELECT * FROM orc_male_names')
     .then((name) => {
@@ -39,7 +39,7 @@ router.post('/', function(req, res) {
 
 //UPDATE single character
 router.put('/:id', function(req, res) {
-  SqlRunner.run('UPDATE non_player_chars SET first_name = $1, job = $3 where id = $2', [req.body.name, req.params.id, req.body.job])
+  SqlRunner.run('UPDATE non_player_chars SET first_name = $2, job = $3, age = $4, high_skill = $5, low_skill = $6 where id = $1', [req.params.id, req.body.name, req.body.job, req.body.age, req.body.highSkill, req.body.lowSkill])
     .then((name) => {
       SqlRunner.run('SELECT * FROM non_player_chars')
         .then((result) => {
