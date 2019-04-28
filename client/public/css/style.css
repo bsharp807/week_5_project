@@ -1,8 +1,41 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Exo 2", verdana, sans-serif;
+  font-size: 1.5em;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+.initial-buttons {
+  text-align: center;
+}
+
+.initial-button {
+  width: 20%;
+  padding: 5px;
+  margin-top: 8px;
+  margin-bottom: : 8px;
+  margin-left: 33%;
+  margin-right: 33%;
+  display: inline-block;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: content-box;
+
+  text-align: center;
+  font-size: 1em;
+
+  cursor: pointer;
+}
+
+.hidden-generate {
+  visibility: hidden;
+  z-index: 50;
 }

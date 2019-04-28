@@ -4,12 +4,69 @@
   <title>NPC Generator</title>
   <script src="js/bundle.js"></script>
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 </head>
 
 <body>
   <h1>NPC Gen</h1>
-  <p>Nothing here yet</p>
 
+  <div class="initial-buttons">
+    <button type="button" name="generate" class="initial-button">Generate</button>
+    <button type="button" name="random" class="initial-button">Random</button>
+    <button type="button" name="list" class="initial-button">List</button>
+  </div>
+
+  <div class="hidden-generate" id="hidden-generate">
+
+    <form autocomplete="off" class="generate-form" id="generate-form">
+
+      <div id="firstName">
+        <div class="text-input">
+          <label for="firstName">First Name<label>
+            <input type="text" name="firstName" />
+            <input type="button" name="firstNameRNG" value="Random" />
+        </div>
+      </div>
+
+      <div id="lastName">
+        <div class="text-input">
+          <label for="lastName">Last Name<label>
+            <input type="text" name="lastName" />
+            <input type="button" name="lastNameRNG" value="Random" />
+        </div>
+      </div>
+
+      <div id="race">
+        <div class="dropdown-input">
+          <label for="race">Race<label>
+            <select name="race">
+              <option value="Orc">Orc</option>
+              <option value="Elf">Elf</option>
+              <option value="Human">Human</option>
+              <option value="Tiefling">Tiefling</option>
+              <option value="Dwarf">Dwarf</option>
+            </select>
+            <input type="button" name="raceRNG" value="Random" />
+        </div>
+      </div>
+
+      <div id="jobs">
+        <div class="dropdown-input">
+          <label for="jobs">Class<label>
+            <select name="jobs">
+              <option value="Barbarian">Barbarian</option>
+              <option value="Ranger">Ranger</option>
+              <option value="Cleric">Cleric</option>
+              <option value="Wizard">Wizard</option>
+              <option value="Dwarf">Rogue</option>
+            </select>
+            <input type="button" name="jobRNG" value="Random" />
+        </div>
+      </div>
+
+    </form>
+
+  </div>
 
   <div id="display">
   </div>
