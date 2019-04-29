@@ -1,5 +1,7 @@
 DROP TABLE non_player_chars;
 DROP TABLE orc_names;
+DROP TABLE orc_surnames;
+DROP TABLE orc_female_names;
 DROP TABLE jobs;
 DROP TABLE skills;
 DROP TABLE traits;
@@ -17,6 +19,11 @@ CREATE TABLE non_player_chars(
 );
 
 CREATE TABLE orc_names(
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE orc_surnames(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
@@ -53,6 +60,14 @@ INSERT INTO orc_names (name) VALUES ('Gorge');
 INSERT INTO orc_names (name) VALUES ('Frunks');
 INSERT INTO orc_names (name) VALUES ('Ozymandiork');
 INSERT INTO orc_names (name) VALUES ('Arkus');
+
+-- ORC SURNAMES
+INSERT INTO orc_names (name) VALUES ('Oathbreaker');
+INSERT INTO orc_names (name) VALUES ('Gruzzle');
+INSERT INTO orc_names (name) VALUES ('Jaegerjack');
+INSERT INTO orc_names (name) VALUES ('Smashum');
+INSERT INTO orc_names (name) VALUES ('Arachnias');
+
 
 -- JOBS
 
