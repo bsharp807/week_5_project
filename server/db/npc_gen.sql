@@ -62,11 +62,12 @@ INSERT INTO orc_names (name) VALUES ('Ozymandiork');
 INSERT INTO orc_names (name) VALUES ('Arkus');
 
 -- ORC SURNAMES
-INSERT INTO orc_names (name) VALUES ('Oathbreaker');
-INSERT INTO orc_names (name) VALUES ('Gruzzle');
-INSERT INTO orc_names (name) VALUES ('Jaegerjack');
-INSERT INTO orc_names (name) VALUES ('Smashum');
-INSERT INTO orc_names (name) VALUES ('Arachnias');
+
+INSERT INTO orc_surnames (name) VALUES ('Oathbreaker');
+INSERT INTO orc_surnames (name) VALUES ('Gruzzle');
+INSERT INTO orc_surnames (name) VALUES ('Jaegerjack');
+INSERT INTO orc_surnames (name) VALUES ('Smashum');
+INSERT INTO orc_surnames (name) VALUES ('Arachnias');
 
 
 -- JOBS
