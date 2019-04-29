@@ -20,6 +20,26 @@ class NPC {
       })
   }
 
+  postData (npc) {
+    const url = `http://localhost:3000/npc/`
+    const request = new RequestHelper(url);
+    request.post(npc)
+      .then((data) => {
+        console.log(this.data[0[2]]);
+      })
+
+  }
+
+  putData(npc) {
+    const url = `http://localhost:3000/npc/${this.id}`;
+    const request = new RequestHelper(url);
+    request.put()
+      .then((data) => {
+        this.data = data;
+        PubSub.publish('NPC:initial-data-ready', this.data[0]);
+      })
+  }
+
 }
 
 module.exports = NPC;
