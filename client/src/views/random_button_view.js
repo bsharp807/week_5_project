@@ -20,26 +20,48 @@ class RandomButtonView {
   bindEvents() {
     this.element.addEventListener('click', (evt) => {
       const newChar = {};
-      newChar.first_name = this.randomFirstName();
-      newChar.last_name = this.randomLastName();
       newChar.race = this.randomRace();
+      newChar.first_name = this.filteredFirstName(newChar.race);
+      newChar.last_name = this.randomLastName();
       newChar.job = this.randomJob();
       newChar.age = this.randomAge();
       newChar.high_skill = this.randomSkill();
       newChar.low_skill = this.randomSkill();
-
-      console.log(newChar);
 
       const npc = new NPC();
       npc.postData(newChar);
     })
   }
 
-  randomFirstName() {
+  filteredFirstName(race) {
+    switch(race){
+      case 'Orc':
+        return this.randomOrcFirstName();
+        break;
+      case 'Elf':
+        return this.randomElfFirstName();
+        break;
+      case: 'Human':
+        return this.randomHumanFirstName();
+        break;
+      case: 'Tiefling':
+        return this.randomTieflingFirstName();
+        break;
+      case: 'Dwarf':
+        return this.randomDwarfFirstName();
+        break;
+      default:
+        return 'SWITCH ERROR NAME';
+    }
+  }
+
+  randomOrcFirstName() {
     const rng = new RNG();
-    const firstName = rng.randArray(this.data.names);
+    const firstName = rng.randArray(this.data.orc_names);
     return firstName.name
   }
+
+
 
   randomLastName() {
     const rng = new RNG();

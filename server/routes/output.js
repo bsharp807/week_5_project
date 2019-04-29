@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
   const allData = {}
   SqlRunner.run('SELECT * FROM orc_names')
     .then((name) => {
-      allData.names = name.rows;
+      allData.orc_names = name.rows;
       SqlRunner.run('SELECT * FROM jobs')
         .then((job) => {
           allData.jobs = job.rows;
@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
               allData.skills = skill.rows;
               SqlRunner.run('SELECT * FROM orc_surnames')
                 .then((surname) => {
-                  allData.surnames = surname.rows;
+                  allData.orc_surnames = surname.rows;
                   SqlRunner.run('SELECT * FROM races')
                     .then((race) => {
                       allData.races = race.rows;
