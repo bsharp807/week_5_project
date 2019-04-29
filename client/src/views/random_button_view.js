@@ -22,11 +22,14 @@ class RandomButtonView {
       const newChar = {};
       newChar.race = this.randomRace();
       newChar.first_name = this.filteredFirstName(newChar.race);
-      newChar.last_name = this.randomLastName();
+      newChar.last_name = this.filteredLastName(newChar.race);
       newChar.job = this.randomJob();
       newChar.age = this.randomAge();
       newChar.high_skill = this.randomSkill();
       newChar.low_skill = this.randomSkill();
+      if (newChar.low_skill === newChar.highSkill) {
+        newChar.low_skill = this.randomSkill();
+      }
 
       const npc = new NPC();
       npc.postData(newChar);
@@ -41,17 +44,39 @@ class RandomButtonView {
       case 'Elf':
         return this.randomElfFirstName();
         break;
-      case: 'Human':
+      case 'Human':
         return this.randomHumanFirstName();
         break;
-      case: 'Tiefling':
+      case 'Tiefling':
         return this.randomTieflingFirstName();
         break;
-      case: 'Dwarf':
+      case 'Dwarf':
         return this.randomDwarfFirstName();
         break;
       default:
-        return 'SWITCH ERROR NAME';
+        return 'SWITCH ERROR FIRST NAME';
+    }
+  }
+
+  filteredLastName(race) {
+    switch(race){
+      case 'Orc':
+        return this.randomOrcLastName();
+        break;
+      case 'Elf':
+        return this.randomElfLastName();
+        break;
+      case 'Human':
+        return this.randomHumanLastName();
+        break;
+      case 'Tiefling':
+        return this.randomTieflingLastName();
+        break;
+      case 'Dwarf':
+        return this.randomDwarfLastName();
+        break;
+      default:
+        return 'SWITCH ERROR LAST NAME';
     }
   }
 
@@ -61,11 +86,57 @@ class RandomButtonView {
     return firstName.name
   }
 
-
-
-  randomLastName() {
+  randomElfFirstName() {
     const rng = new RNG();
-    const lastName = rng.randArray(this.data.surnames);
+    const firstName = rng.randArray(this.data.elf_names);
+    return firstName.name
+  }
+
+  randomHumanFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.human_names);
+    return firstName.name
+  }
+
+  randomTieflingFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.tiefling_names);
+    return firstName.name
+  }
+
+  randomDwarfFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.dwarf_names);
+    return firstName.name
+  }
+
+  randomOrcLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.orc_surnames);
+    return lastName.name
+  }
+
+  randomElfLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.elf_surnames);
+    return lastName.name
+  }
+
+  randomHumanLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.human_surnames);
+    return lastName.name
+  }
+
+  randomTieflingLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.tiefling_surnames);
+    return lastName.name
+  }
+
+  randomDwarfLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.dwarf_surnames);
     return lastName.name
   }
 

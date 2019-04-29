@@ -49,4 +49,10 @@ a {
   margin-right: 33%;
 
   padding: 1%;
+
+  background-color: white;
+}
+
+#display {
+  text-align: center;
 }
