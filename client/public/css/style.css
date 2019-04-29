@@ -56,3 +56,23 @@ a {
 #display {
   text-align: center;
 }
+
+#list-container {
+  display: none;
+}
+
+#list-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-card {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 4px;
+  margin: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+}
