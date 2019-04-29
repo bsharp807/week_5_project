@@ -11,9 +11,9 @@
   <h1>NPC Gen</h1>
 
   <div class="initial-buttons">
-    <button type="button" name="generate" class="initial-button">Generate</button>
-    <button type="button" name="random" class="initial-button">Random</button>
-    <button type="button" name="list" class="initial-button">List</button>
+    <button type="button" id="generate-button" name="generate" class="initial-button">Generate</button>
+    <button type="button" id="random-button" name="random" class="initial-button">Random</button>
+    <button type="button" id="list-button" name="list" class="initial-button">List</button>
   </div>
 
   <div class="hidden-generate" id="hidden-generate">
@@ -61,6 +61,12 @@
               <option value="Dwarf">Rogue</option>
             </select>
             <input type="button" name="jobRNG" value="Random" />
+        </div>
+      </div>
+
+      <div id="submit">
+        <div class="submit">
+          <input type="submit" name="submit" id="submit-button" class="submit-button" value="Submit" />
         </div>
       </div>
 
