@@ -18,8 +18,7 @@ class RandomButtonView {
       newChar.age = rand.randomAge();
       newChar.high_skill = rand.randomSkill();
       newChar.low_skill = rand.randomSkill();
-      if (newChar.low_skill === newChar.highSkill) {
-        console.log('hitting here');
+      if (newChar.low_skill === newChar.high_skill) {
         newChar.low_skill = rand.randomSkill();
       }
 

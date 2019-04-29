@@ -12,7 +12,6 @@ class RandomGeneration {
   receiveTableData() {
     PubSub.subscribe('Table:table-data-ready', (evt) => {
       this.data = evt.detail;
-      console.log(this.data);
     })
   }
 
