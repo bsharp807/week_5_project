@@ -2,7 +2,7 @@ const NPC = require('../models/npc.js');
 const RNG = require('../models/rng.js');
 const PubSub = require('../helpers/pub_sub.js');
 
-class randomButtonView {
+class RandomButtonView {
 
   constructor() {
 
@@ -49,8 +49,19 @@ class randomButtonView {
 
   randomRace() {
     const rng = new RNG();
-    const race = rng.randArray(this.data.race);
+    const race = rng.randArray(this.data.races);
     return race.name
+  }
+
+  randomJob() {
+    const rng = new RNG();
+    const job = rng.randArray(this.data.jobs);
+    return job.name
+  }
+
+  randomAge() {
+    const rng = new RNG();
+    return rng.randNum(125, 15);
   }
 
   randomSkill() {
@@ -61,3 +72,5 @@ class randomButtonView {
 
 
 }
+
+module.exports = RandomButtonView;

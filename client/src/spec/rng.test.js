@@ -18,4 +18,8 @@ describe('rng test', () => {
     expect(rng.randArray(newArray)).toBe('test one');
   })
 
+  test('random number generator returns a number with a minimum value', () => {
+    expect(rng.randNum(100, 15)).toBeGreaterThan(15);
+  })
+
 })
