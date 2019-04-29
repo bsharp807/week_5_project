@@ -17,7 +17,11 @@ router.get('/', function(req, res) {
               SqlRunner.run('SELECT * FROM orc_surnames')
                 .then((surname) => {
                   allData.surnames = surname.rows;
-                  res.status(200).json(allData);
+                  SqlRunner.run('SELECT * FROM races')
+                    .then((race) => {
+                      allData.races = race.rows;
+                      res.status(200).json(allData);
+                    })
                 })
             })
         })
