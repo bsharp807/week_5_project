@@ -2,6 +2,7 @@ DROP TABLE non_player_chars;
 DROP TABLE orc_names;
 DROP TABLE orc_surnames;
 DROP TABLE orc_female_names;
+DROP TABLE races;
 DROP TABLE jobs;
 DROP TABLE skills;
 DROP TABLE traits;
@@ -31,6 +32,11 @@ CREATE TABLE orc_surnames(
 CREATE TABLE orc_female_names(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
+);
+
+CREATE TABLE races(
+  id SERIAL8 PRIMARY KEY,
+  race VARCHAR(255)
 );
 
 CREATE TABLE jobs(
@@ -69,6 +75,13 @@ INSERT INTO orc_surnames (name) VALUES ('Jaegerjack');
 INSERT INTO orc_surnames (name) VALUES ('Smashum');
 INSERT INTO orc_surnames (name) VALUES ('Arachnias');
 
+-- RACES
+
+INSERT INTO races (race) VALUES ('Orc');
+INSERT INTO races (race) VALUES ('Elf');
+INSERT INTO races (race) VALUES ('Human');
+INSERT INTO races (race) VALUES ('Tiefling');
+INSERT INTO races (race) VALUES ('Dwarf');
 
 -- JOBS
 
