@@ -41,6 +41,18 @@ class randomButtonView {
     return firstName.name
   }
 
+  randomLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.surnames);
+    return lastName.name
+  }
+
+  randomRace() {
+    const rng = new RNG();
+    const race = rng.randArray(this.data.race);
+    return race.name
+  }
+
   randomSkill() {
     const rng = new RNG();
     const skill = rng.randArray(this.data.skills);
