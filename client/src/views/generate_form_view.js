@@ -4,7 +4,13 @@ class GenerateFormView {
 
   constructor() {
 
+    this.hidden = document.querySelector('#hidden-generate');
     this.form = document.querySelector('#generate-form');
+    this.firstNameRNG = document.querySelector('#firstNameRNG');
+    this.lastNameRNG = document.querySelector('#lastNameRNG');
+    this.ageRNG = document.querySelector('#ageRNG');
+    this.raceRNG = document.querySelector('#raceRNG');
+    this.jobRNG = document.querySelector('#jobRNG');
 
   }
 
@@ -31,13 +37,42 @@ class GenerateFormView {
       newChar.high_skill = rand.randomSkill();
       newChar.low_skill = rand.randomSkill();
 
-      console.log(newChar);
-
       const npc = new NPC();
       npc.postData(newChar);
+
+      this.hidden.style.visibility = 'hidden';
     })
   }
 
+  firstNameRNGButton(rand) {
+    this.firstNameRNG.addEventListener('click', () => {
+      this.form.firstName.value = rand.filteredFirstName(this.form.race.value);
+    })
+  }
+
+  lastNameRNGButton(rand) {
+    this.lastNameRNG.addEventListener('click', () => {
+      this.form.lastName.value = rand.filteredLastName(this.form.race.value);
+    })
+  }
+
+  ageRNGButton(rand) {
+    this.ageRNG.addEventListener('click', () => {
+      this.form.age.value = rand.randomAge();
+    })
+  }
+
+  raceRNGButton(rand) {
+    this.raceRNG.addEventListener('click', () => {
+      this.form.race.value = rand.randomRace();
+    })
+  }
+
+  jobRNGButton(rand) {
+    this.jobRNG.addEventListener('click', () => {
+      this.form.jobs.value = rand.randomJob();
+    })
+  }
 }
 
 module.exports = GenerateFormView;

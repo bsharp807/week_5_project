@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
   randomGeneration.receiveTableData();
 
   generateFormView.bindEvents(randomGeneration);
+  generateFormView.firstNameRNGButton(randomGeneration);
+  generateFormView.lastNameRNGButton(randomGeneration);
+  generateFormView.ageRNGButton(randomGeneration);
+  generateFormView.raceRNGButton(randomGeneration);
+  generateFormView.jobRNGButton(randomGeneration);
+
 
   npc.getInitialDisplay();
   table.getTableData();
