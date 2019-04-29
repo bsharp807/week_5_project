@@ -29,7 +29,6 @@ class NPC {
         this.id = this.data.id;
         this.getInitialDisplay();
       })
-
   }
 
   putData(npc) {
