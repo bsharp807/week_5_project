@@ -1,5 +1,6 @@
 const NPC = require('./models/npc.js');
 const Table = require('./models/table.js');
+const RandomGeneration = require('./models/random_generation.js');
 
 const NpcDisplayView = require('./views/npc_display_view.js');
 const GenerateButtonView = require('./views/generate_button_view.js');
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const npc = new NPC();
   const table = new Table();
+  const randomGeneration = new RandomGeneration();
 
   const npcDisplayView = new NpcDisplayView();
   const generateButtonView = new GenerateButtonView();
@@ -21,11 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   generateButtonView.bindEvents();
 
-  randomButtonView.receiveTableData();
-  randomButtonView.bindEvents();
+  randomButtonView.bindEvents(randomGeneration);
+  randomGeneration.receiveTableData();
 
-  generateFormView.receiveTableData();
-  generateFormView.bindEvents();
+  generateFormView.bindEvents(randomGeneration);
 
   npc.getInitialDisplay();
   table.getTableData();

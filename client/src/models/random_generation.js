@@ -1,11 +1,19 @@
 const RNG = require('../models/rng.js');
+const PubSub = require('../helpers/pub_sub.js');
 
 class RandomGeneration {
 
-  constructor(data) {
+  constructor() {
 
-    this.data = data;
+    this.data = null;
 
+  }
+
+  receiveTableData() {
+    PubSub.subscribe('Table:table-data-ready', (evt) => {
+      this.data = evt.detail;
+      console.log(this.data);
+    })
   }
 
   filteredFirstName(race) {

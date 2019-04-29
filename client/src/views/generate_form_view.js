@@ -1,34 +1,35 @@
 const NPC = require('../models/npc.js');
-const RNG = require('../models/rng.js');
-const PubSub = require('../helpers/pub_sub.js');
 
 class GenerateFormView {
 
   constructor() {
 
     this.form = document.querySelector('#generate-form');
-    this.data = null
 
   }
 
-  receiveTableData() {
-    PubSub.subscribe('Table:table-data-ready', (evt) => {
-      this.data = evt.detail;
-    })
-  }
-
-  bindEvents() {
+  bindEvents(rand) {
     this.form.addEventListener('submit', (evt) => {
       evt.preventDefault();
+
+
       const newChar = {};
       const input = evt.target;
-      newChar.first_name = input.firstName.value;
-      newChar.last_name = input.lastName.value;
+
       newChar.race = input.race.value;
+
+      if(input.firstName.value) {
+        newChar.first_name = input.firstName.value;
+      } else {newChar.first_name = rand.filteredFirstName(newChar.race)}
+
+      if(input.lastName.value) {
+        newChar.last_name = input.lastName.value;
+      } else {newChar.last_name = rand.filteredLastName(newChar.race)}
+
       newChar.job = input.jobs.value;
       newChar.age = input.age.value;
-      newChar.high_skill = this.randomSkill();
-      newChar.low_skill = this.randomSkill();
+      newChar.high_skill = rand.randomSkill();
+      newChar.low_skill = rand.randomSkill();
 
       console.log(newChar);
 
@@ -37,17 +38,6 @@ class GenerateFormView {
     })
   }
 
-  randomFirstName() {
-    const rng = new RNG();
-    const firstName = rng.randArray(this.data.names);
-    return firstName.name
-  }
-
-  randomSkill() {
-    const rng = new RNG();
-    const skill = rng.randArray(this.data.skills);
-    return skill.skill;
-  }
 }
 
 module.exports = GenerateFormView;
