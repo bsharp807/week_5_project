@@ -20,7 +20,6 @@ class GenerateFormView {
       newChar.age = evt.target.age.value;
       newChar.high_skill = 'Dexterity';
       newChar.low_skill = 'Constitution';
-      console.log(newChar);
 
       const npc = new NPC();
       npc.postData(newChar);

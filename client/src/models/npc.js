@@ -21,11 +21,14 @@ class NPC {
   }
 
   postData(npc) {
+    console.log('the code has reached postData');
     const url = `http://localhost:3000/npc/`
     const request = new RequestHelper(url);
     request.post(npc)
       .then((data) => {
-        console.log(this.data[0[2]]);
+        this.data = data[data.length - 1];
+        this.id = this.data.id;
+        this.getInitialDisplay();
       })
 
   }
