@@ -21,11 +21,12 @@ class GenerateFormView {
     this.form.addEventListener('submit', (evt) => {
       evt.preventDefault();
       const newChar = {};
-      newChar.first_name = evt.target.firstName.value;
-      newChar.last_name = evt.target.lastName.value;
-      newChar.race = evt.target.race.value;
-      newChar.job = evt.target.jobs.value;
-      newChar.age = evt.target.age.value;
+      const input = evt.target;
+      newChar.first_name = input.firstName.value;
+      newChar.last_name = input.lastName.value;
+      newChar.race = input.race.value;
+      newChar.job = input.jobs.value;
+      newChar.age = input.age.value;
       newChar.high_skill = this.randomSkill();
       newChar.low_skill = this.randomSkill();
 
@@ -36,12 +37,17 @@ class GenerateFormView {
     })
   }
 
+  randomFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.names);
+    return firstName.name
+  }
+
   randomSkill() {
     const rng = new RNG();
     const skill = rng.randArray(this.data.skills);
     return skill.skill;
   }
-
 }
 
 module.exports = GenerateFormView;
