@@ -1,4 +1,5 @@
 const NPC = require('../models/npc.js');
+const RNG = require('../models/rng.js');
 
 class GenerateFormView {
 
@@ -16,7 +17,13 @@ class GenerateFormView {
       newChar.last_name = evt.target.lastName.value;
       newChar.race = evt.target.race.value;
       newChar.job = evt.target.jobs.value;
+      newChar.age = evt.target.age.value;
+      newChar.high_skill = 'Dexterity';
+      newChar.low_skill = 'Constitution';
       console.log(newChar);
+
+      const npc = new NPC();
+      npc.postData(newChar);
     })
   }
 }

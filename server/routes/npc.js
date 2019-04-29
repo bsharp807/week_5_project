@@ -28,7 +28,7 @@ router.get('/orc', function(req, res) {
 
 //ADD character
 router.post('/', function(req, res) {
-  SqlRunner.run('INSERT INTO non_player_chars (first_name, job, age, high_skill, low_skill) VALUES ($1, $2, $3, $4, $5)', [req.body.name, req.body.job, req.body.age, req.body.highSkill, req.body.lowSkill])
+  SqlRunner.run('INSERT INTO non_player_chars (first_name, last_name job, age, high_skill, low_skill) VALUES ($1, $6, $2, $3, $4, $5)', [req.body.first_name, req.body.job, req.body.age, req.body.high_skill, req.body.low_skill, req.body.last_name])
     .then((result) => {
       SqlRunner.run('SELECT * FROM non_player_chars')
         .then((result) => {
@@ -39,7 +39,7 @@ router.post('/', function(req, res) {
 
 //UPDATE single character
 router.put('/:id', function(req, res) {
-  SqlRunner.run('UPDATE non_player_chars SET first_name = $2, job = $3, age = $4, high_skill = $5, low_skill = $6 where id = $1', [req.params.id, req.body.name, req.body.job, req.body.age, req.body.highSkill, req.body.lowSkill])
+  SqlRunner.run('UPDATE non_player_chars SET first_name = $2, job = $3, age = $4, high_skill = $5, low_skill = $6 where id = $1', [req.params.id, req.body.name, req.body.job, req.body.age, req.body.high_skill, req.body.low_skill])
     .then((name) => {
       SqlRunner.run('SELECT * FROM non_player_chars')
         .then((result) => {

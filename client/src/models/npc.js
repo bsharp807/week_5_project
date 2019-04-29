@@ -10,7 +10,7 @@ class NPC {
 
   }
 
-  getInitialDisplay () {
+  getInitialDisplay() {
     const url = `http://localhost:3000/npc/${this.id}`;
     const request = new RequestHelper(url);
     request.get()
@@ -20,7 +20,7 @@ class NPC {
       })
   }
 
-  postData (npc) {
+  postData(npc) {
     const url = `http://localhost:3000/npc/`
     const request = new RequestHelper(url);
     request.post(npc)
