@@ -6,7 +6,7 @@ class RandomButtonView {
 
   constructor() {
 
-    this.element = doucment.querySelector('#random-button');
+    this.element = document.querySelector('#random-button');
     this.data = null;
 
   }
@@ -31,7 +31,7 @@ class RandomButtonView {
       console.log(newChar);
 
       const npc = new NPC();
-      // npc.postData(newChar);
+      npc.postData(newChar);
     })
   }
 
@@ -50,18 +50,18 @@ class RandomButtonView {
   randomRace() {
     const rng = new RNG();
     const race = rng.randArray(this.data.races);
-    return race.name
+    return race.race
   }
 
   randomJob() {
     const rng = new RNG();
     const job = rng.randArray(this.data.jobs);
-    return job.name
+    return job.job
   }
 
   randomAge() {
     const rng = new RNG();
-    return rng.randNum(125, 15);
+    return rng.randNum(25, 14);
   }
 
   randomSkill() {
