@@ -45,6 +45,10 @@ class NpcDisplayView {
     job.classList.add('display-job');
     job.innerHTML = data.job;
 
+    const age = document.createElement('div');
+    age.classList.add('display-age');
+    age.innerHTML = data.age;
+
     const highSkill = document.createElement('div');
     highSkill.classList.add('display-highSkill');
     highSkill.innerHTML = data.high_skill;
@@ -57,6 +61,7 @@ class NpcDisplayView {
     card.appendChild(header);
     card.appendChild(race);
     card.appendChild(job);
+    card.appendChild(age);
     card.appendChild(highSkill);
     card.appendChild(lowSkill);
 
