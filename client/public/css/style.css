@@ -54,7 +54,81 @@ a {
 }
 
 #display {
-  text-align: center;
+  text-align: left;
+  width: 50%;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 10px;
+
+}
+
+.display-card {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding: 4px;
+  width: 70%;
+  border-style: solid;
+  border-width: thin;
+}
+
+.display-item {
+}
+
+.display-image {
+  height: 300px;
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  justify: right;
+  text-align: right;
+  right: 0px;
+  width: 100%;
+}
+
+.display-header {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.display-race {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 1em;
+}
+
+.display-job {
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 0.8em;
+}
+
+.display-age {
+  grid-column: 2;
+  grid-row: 4;
+  font-size: 0.8em;
+}
+
+.display-highSkillHeading {
+  grid-column: 1;
+  grid-row: 5;
+  font-size: 0.7em;
+}
+
+.display-highSkill {
+  grid-column: 2;
+  grid-row: 5;
+  font-size: 0.7em;
+}
+
+.display-lowSkillHeading {
+  grid-column: 1;
+  grid-row: 6;
+  font-size: 0.7em;
+}
+
+.display-lowSkill {
+  grid-column: 2;
+  grid-row: 6;
+  font-size: 0.7em;
 }
 
 #list-container {

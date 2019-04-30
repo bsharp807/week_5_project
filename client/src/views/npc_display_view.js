@@ -31,30 +31,39 @@ class NpcDisplayView {
     card.classList.add('display-card');
 
     const image = document.createElement('img');
-    image.classList.add('display-image');
+    image.classList.add('display-image', 'display-item');
+    image.src = `../images/${data.race}.jpg`;
 
     const header = document.createElement('div');
-    header.classList.add('display-header');
+    header.classList.add('display-header', 'display-item');
     header.innerHTML = `${data.first_name} ${data.last_name}`;
 
     const race = document.createElement('div');
-    race.classList.add('display-race');
+    race.classList.add('display-race',  'display-item');
     race.innerHTML = data.race;
 
     const job = document.createElement('div');
-    job.classList.add('display-job');
+    job.classList.add('display-job', 'display-item');
     job.innerHTML = data.job;
 
     const age = document.createElement('div');
-    age.classList.add('display-age');
+    age.classList.add('display-age', 'display-item');
     age.innerHTML = data.age;
 
+    const highSkillHeading = document.createElement('div');
+    highSkillHeading.classList.add('display-highSkillHeading', 'display-item');
+    highSkillHeading.innerHTML = 'High Skill';
+
     const highSkill = document.createElement('div');
-    highSkill.classList.add('display-highSkill');
+    highSkill.classList.add('display-highSkill', 'display-item');
     highSkill.innerHTML = data.high_skill;
 
+    const lowSkillHeading = document.createElement('div');
+    lowSkillHeading.classList.add('display-lowSkillHeading', 'display-item');
+    lowSkillHeading.innerHTML = 'Low Skill';
+
     const lowSkill = document.createElement('div');
-    lowSkill.classList.add('display-lowSkill');
+    lowSkill.classList.add('display-lowSkill', 'display-item');
     lowSkill.innerHTML = data.low_skill;
 
     card.appendChild(image);
@@ -62,7 +71,9 @@ class NpcDisplayView {
     card.appendChild(race);
     card.appendChild(job);
     card.appendChild(age);
+    card.appendChild(highSkillHeading);
     card.appendChild(highSkill);
+    card.appendChild(lowSkillHeading);
     card.appendChild(lowSkill);
 
     return card;
