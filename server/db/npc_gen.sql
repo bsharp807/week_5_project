@@ -711,11 +711,19 @@ INSERT INTO flaws (flaw) VALUES ('an all-consuming envy of anothers station');
 INSERT INTO flaws (flaw) VALUES ('an overpowering greed');
 INSERT INTO flaws (flaw) VALUES ('a proneness to rage');
 INSERT INTO flaws (flaw) VALUES ('a powerful enemy');
-INSERT INTO flaws (flaw) VALUES ('a specific and overpowering phobia');
+INSERT INTO flaws (flaw) VALUES ('an overpowering arachnaphobia');
+INSERT INTO flaws (flaw) VALUES ('an overpowering acrophobia');
+INSERT INTO flaws (flaw) VALUES ('an overpowering agrophobia');
+INSERT INTO flaws (flaw) VALUES ('an overpowering claustrophobia');
 INSERT INTO flaws (flaw) VALUES ('a shameful and scandalous history');
-INSERT INTO flaws (flaw) VALUES ('a secret crime');
+INSERT INTO flaws (flaw) VALUES ('a secret crime they committed long ago');
 INSERT INTO flaws (flaw) VALUES ('their possession of forbidden lore');
 INSERT INTO flaws (flaw) VALUES ('their foolhardy bravery');
+INSERT INTO flaws (flaw) VALUES ('their hero complex');
+INSERT INTO flaws (flaw) VALUES ('their insatiable blood lust');
+INSERT INTO flaws (flaw) VALUES ('an irrational deathwish');
+INSERT INTO flaws (flaw) VALUES ('their tendency to overthink things');
+INSERT INTO flaws (flaw) VALUES ('their crippling self-doubt');
 
 -- BIRTHPLACES
 
