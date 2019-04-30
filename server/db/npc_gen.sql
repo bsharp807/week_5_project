@@ -620,7 +620,7 @@ INSERT INTO mannerisms (mannerism) VALUES ('speaks in rhyme');
 INSERT INTO mannerisms (mannerism) VALUES ('speaks in a peculiar way');
 INSERT INTO mannerisms (mannerism) VALUES ('has a particularly high pitched voice');
 INSERT INTO mannerisms (mannerism) VALUES ('has a particularly low pitched voice');
-INSERT INTO mannerisms (mannerism) VALUES ('slurs words');
+INSERT INTO mannerisms (mannerism) VALUES ('slurs their words');
 INSERT INTO mannerisms (mannerism) VALUES ('has a lisp');
 INSERT INTO mannerisms (mannerism) VALUES ('stutters');
 INSERT INTO mannerisms (mannerism) VALUES ('enunciates over clearly');
