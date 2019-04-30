@@ -548,44 +548,45 @@ INSERT INTO skills (skill) VALUES ('Charisma');
 
 -- APPEARANCES
 
-INSERT INTO appearances (appearance) VALUES ('Distinctive Jewelry');
-INSERT INTO appearances (appearance) VALUES ('Piercings');
-INSERT INTO appearances (appearance) VALUES ('Flamboyant Clothes');
-INSERT INTO appearances (appearance) VALUES ('Formal Clothes');
-INSERT INTO appearances (appearance) VALUES ('Ragged, Dirty Clothes');
-INSERT INTO appearances (appearance) VALUES ('Pronounced Scar');
-INSERT INTO appearances (appearance) VALUES ('Missing Teeth');
-INSERT INTO appearances (appearance) VALUES ('Missing Fingers');
-INSERT INTO appearances (appearance) VALUES ('Unusual Eye Colour');
-INSERT INTO appearances (appearance) VALUES ('Heterochromia');
-INSERT INTO appearances (appearance) VALUES ('Tattoos');
-INSERT INTO appearances (appearance) VALUES ('Birthmark');
-INSERT INTO appearances (appearance) VALUES ('Unusual Skin Colour');
-INSERT INTO appearances (appearance) VALUES ('Bald');
-INSERT INTO appearances (appearance) VALUES ('Braided Beard');
-INSERT INTO appearances (appearance) VALUES ('Braided Hair');
-INSERT INTO appearances (appearance) VALUES ('Unusual Hair Colour');
-INSERT INTO appearances (appearance) VALUES ('Nervous Eye Twitch');
-INSERT INTO appearances (appearance) VALUES ('Distinctive Nose');
-INSERT INTO appearances (appearance) VALUES ('Distinctive, Crooked Posture');
-INSERT INTO appearances (appearance) VALUES ('Distinctive, Rigid Posture');
-INSERT INTO appearances (appearance) VALUES ('Exceptional Beauty');
-INSERT INTO appearances (appearance) VALUES ('Exceptional Ugly');
+INSERT INTO appearances (appearance) VALUES ('distinctive jewelry');
+INSERT INTO appearances (appearance) VALUES ('piercings');
+INSERT INTO appearances (appearance) VALUES ('flamboyant clothes');
+INSERT INTO appearances (appearance) VALUES ('formal wear');
+INSERT INTO appearances (appearance) VALUES ('traditional wear');
+INSERT INTO appearances (appearance) VALUES ('ragged, dirty clothes');
+INSERT INTO appearances (appearance) VALUES ('pronounced scar');
+INSERT INTO appearances (appearance) VALUES ('missing teeth');
+INSERT INTO appearances (appearance) VALUES ('missing fingers');
+INSERT INTO appearances (appearance) VALUES ('unusual eye colour');
+INSERT INTO appearances (appearance) VALUES ('heterochromia');
+INSERT INTO appearances (appearance) VALUES ('tattoos');
+INSERT INTO appearances (appearance) VALUES ('birthmark');
+INSERT INTO appearances (appearance) VALUES ('unusual skin colour');
+INSERT INTO appearances (appearance) VALUES ('bald');
+INSERT INTO appearances (appearance) VALUES ('braided beard');
+INSERT INTO appearances (appearance) VALUES ('braided hair');
+INSERT INTO appearances (appearance) VALUES ('unusual hair colour');
+INSERT INTO appearances (appearance) VALUES ('nervous eye twitch');
+INSERT INTO appearances (appearance) VALUES ('distinctive nose');
+INSERT INTO appearances (appearance) VALUES ('distinctive, crooked posture');
+INSERT INTO appearances (appearance) VALUES ('distinctive, rigid posture');
+INSERT INTO appearances (appearance) VALUES ('exceptional beauty');
+INSERT INTO appearances (appearance) VALUES ('exceptional ugliness');
 
 -- TRAITS
 
-INSERT INTO traits (trait) VALUES ('Argumentative');
-INSERT INTO traits (trait) VALUES ('Arrogant');
-INSERT INTO traits (trait) VALUES ('Blustering');
-INSERT INTO traits (trait) VALUES ('Rude');
-INSERT INTO traits (trait) VALUES ('Curious');
-INSERT INTO traits (trait) VALUES ('Friendly');
-INSERT INTO traits (trait) VALUES ('Honest');
-INSERT INTO traits (trait) VALUES ('Hot Tempered');
-INSERT INTO traits (trait) VALUES ('Irritable');
-INSERT INTO traits (trait) VALUES ('Ponderous');
-INSERT INTO traits (trait) VALUES ('Quiet');
-INSERT INTO traits (trait) VALUES ('Suspicious');
+INSERT INTO traits (trait) VALUES ('argumentative');
+INSERT INTO traits (trait) VALUES ('arrogant');
+INSERT INTO traits (trait) VALUES ('blustering');
+INSERT INTO traits (trait) VALUES ('rude');
+INSERT INTO traits (trait) VALUES ('curious');
+INSERT INTO traits (trait) VALUES ('friendly');
+INSERT INTO traits (trait) VALUES ('honest');
+INSERT INTO traits (trait) VALUES ('hot tempered');
+INSERT INTO traits (trait) VALUES ('irritable');
+INSERT INTO traits (trait) VALUES ('ponderous');
+INSERT INTO traits (trait) VALUES ('quiet');
+INSERT INTO traits (trait) VALUES ('suspicious');
 
 -- TALENTS
 
