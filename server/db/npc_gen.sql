@@ -731,7 +731,7 @@ INSERT INTO bonds (bond) VALUES ('out for revenge against all those who wronged 
 -- FLAWS
 
 INSERT INTO flaws (flaw) VALUES ('a forbidden love');
-INSERT INTO flaws (flaw) VALUES ('a susceptibiluty to romance');
+INSERT INTO flaws (flaw) VALUES ('a susceptibility to romance');
 INSERT INTO flaws (flaw) VALUES ('an enjoyment of decadent pleasures');
 INSERT INTO flaws (flaw) VALUES ('their arrogance');
 INSERT INTO flaws (flaw) VALUES ('an all-consuming envy of anothers possessions');
