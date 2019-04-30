@@ -574,30 +574,31 @@ INSERT INTO skills (skill) VALUES ('Charisma');
 
 -- APPEARANCES
 
-INSERT INTO appearances (appearance) VALUES ('distinctive jewelry');
-INSERT INTO appearances (appearance) VALUES ('piercing');
-INSERT INTO appearances (appearance) VALUES ('flamboyant dress sense');
-INSERT INTO appearances (appearance) VALUES ('formal wear');
-INSERT INTO appearances (appearance) VALUES ('traditional wear');
-INSERT INTO appearances (appearance) VALUES ('scruffy appearance');
-INSERT INTO appearances (appearance) VALUES ('pronounced scar');
-INSERT INTO appearances (appearance) VALUES ('missing teeth');
-INSERT INTO appearances (appearance) VALUES ('missing fingers');
-INSERT INTO appearances (appearance) VALUES ('unusual eye colour');
-INSERT INTO appearances (appearance) VALUES ('heterochromia');
-INSERT INTO appearances (appearance) VALUES ('distinctive tattoo');
-INSERT INTO appearances (appearance) VALUES ('birthmark');
-INSERT INTO appearances (appearance) VALUES ('unusual skin colour');
-INSERT INTO appearances (appearance) VALUES ('bald head');
-INSERT INTO appearances (appearance) VALUES ('braided beard');
-INSERT INTO appearances (appearance) VALUES ('braided hair');
-INSERT INTO appearances (appearance) VALUES ('unusual hair colour');
-INSERT INTO appearances (appearance) VALUES ('nervous eye twitch');
-INSERT INTO appearances (appearance) VALUES ('distinctive nose');
-INSERT INTO appearances (appearance) VALUES ('distinctive, crooked posture');
-INSERT INTO appearances (appearance) VALUES ('distinctive, rigid posture');
-INSERT INTO appearances (appearance) VALUES ('exceptional beauty');
-INSERT INTO appearances (appearance) VALUES ('exceptional ugliness');
+INSERT INTO appearances (appearance) VALUES ('distinctive jewelry is');
+INSERT INTO appearances (appearance) VALUES ('piercings are');
+INSERT INTO appearances (appearance) VALUES ('flamboyant dress sense is');
+INSERT INTO appearances (appearance) VALUES ('formal wear is');
+INSERT INTO appearances (appearance) VALUES ('traditional wear is');
+INSERT INTO appearances (appearance) VALUES ('scruffy appearance is');
+INSERT INTO appearances (appearance) VALUES ('pronounced scar is');
+INSERT INTO appearances (appearance) VALUES ('missing teeth are');
+INSERT INTO appearances (appearance) VALUES ('missing fingers are');
+INSERT INTO appearances (appearance) VALUES ('unusual eye colour is');
+INSERT INTO appearances (appearance) VALUES ('heterochromia is');
+INSERT INTO appearances (appearance) VALUES ('distinctive tattoo is');
+INSERT INTO appearances (appearance) VALUES ('full body tattoos are');
+INSERT INTO appearances (appearance) VALUES ('birthmark is');
+INSERT INTO appearances (appearance) VALUES ('otherworldly skin colour is');
+INSERT INTO appearances (appearance) VALUES ('bald head is');
+INSERT INTO appearances (appearance) VALUES ('braided beard is');
+INSERT INTO appearances (appearance) VALUES ('braided hair is');
+INSERT INTO appearances (appearance) VALUES ('unusual hair colour is');
+INSERT INTO appearances (appearance) VALUES ('nervous eye twitch is');
+INSERT INTO appearances (appearance) VALUES ('distinctive nose is');
+INSERT INTO appearances (appearance) VALUES ('distinctive, crooked posture is');
+INSERT INTO appearances (appearance) VALUES ('distinctive, rigid posture is');
+INSERT INTO appearances (appearance) VALUES ('exceptional beauty is');
+INSERT INTO appearances (appearance) VALUES ('exceptional ugliness is');
 
 -- TRAITS
 
