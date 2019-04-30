@@ -68,8 +68,7 @@ class NpcDisplayView {
 
     const description = document.createElement('div');
     description.classList.add('display-description', 'display-item');
-    description.innerHTML =
-      `${data.firt_name} ${data.last_name}, the ${data.race} ${data.job}, is a ${data.trait} character who's ${data.appearance} is the first thing that jumps out at you when you see them. They are currently aged ${data.age}, and have a great aptitude in their ${data.high_skill} while lacking a bit in their ${data.low_skill}. You have heard that they were born ${data.birthplace}. ${data.first_name} ${data.talent} but ${data.mannerism}. They value  ${data.ideal} above all else, and they are ${data.bond}. Finally, their biggest flaw is ${flaw}.`
+    description.innerHTML = `${data.firt_name} ${data.last_name}, the ${data.race} ${data.job}, is a ${data.trait} character who's ${data.appearance} is the first thing that jumps out at you when you see them. They are currently aged ${data.age}, and have a great aptitude in their ${data.high_skill} while lacking a bit in their ${data.low_skill}. You have heard that they were born ${data.birthplace}. ${data.first_name} ${data.talent} but ${data.mannerism}. They value  ${data.ideal} above all else, and they are ${data.bond}. Finally, their biggest flaw is ${flaw}.`
 
     card.appendChild(image);
     card.appendChild(header);
@@ -80,6 +79,7 @@ class NpcDisplayView {
     card.appendChild(highSkill);
     card.appendChild(lowSkillHeading);
     card.appendChild(lowSkill);
+    card.appendChild(description);
 
     return card;
   }
