@@ -7,6 +7,7 @@ var cors = require("cors");
 
 var outputRouter = require('./routes/output.js');
 var npcRouter = require('./routes/npc');
+var testRouter = require('./routes/test');
 
 var app = express();
 
@@ -19,6 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/npc', npcRouter);
-app.use('/output',outputRouter);
+app.use('/output', outputRouter);
+app.use('/test', testRouter);
 
 module.exports = app;
