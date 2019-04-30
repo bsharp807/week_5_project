@@ -213,6 +213,54 @@ class RandomGeneration {
     const skill = rng.randArray(this.data.skills);
     return skill.skill;
   }
+
+  randomTrait() {
+    const rng = new RNG();
+    const trait = rng.randArray(this.data.traits);
+    return trait.trait;
+  }
+
+  randomAppearance() {
+    const rng = new RNG();
+    const appearance = rng.randArray(this.data.appearances);
+    return appearance.appearance;
+  }
+
+  randomTalent() {
+    const rng = new RNG();
+    const talent = rng.randArray(this.data.talents);
+    return talent.talent;
+  }
+
+  randomMannerism() {
+    const rng = new RNG();
+    const mannerism = rng.randArray(this.data.mannerisms);
+    return mannerism.mannerism;
+  }
+
+  randomIdeal() {
+    const rng = new RNG();
+    const ideal = rng.randArray(this.data.ideals);
+    return ideal.ideal;
+  }
+
+  randomBond() {
+    const rng = new RNG();
+    const bond = rng.randArray(this.data.bonds);
+    return bond.bond;
+  }
+
+  randomFlaw() {
+    const rng = new RNG();
+    const flaw = rng.randArray(this.data.flaws);
+    return flaw.flaw;
+  }
+
+  randomBirthplace() {
+    const rng = new RNG();
+    const birthplace = rng.randArray(this.data.birthplaces);
+    return birthplace.birthplace;
+  }
 }
 
 module.exports = RandomGeneration;
