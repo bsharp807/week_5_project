@@ -28,7 +28,7 @@ router.get('/orc', function(req, res) {
 
 //ADD character
 router.post('/', function(req, res) {
-  SqlRunner.run('INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill) VALUES ($1, $6, $7, $2, $3, $4, $5)', [req.body.first_name, req.body.job, req.body.age, req.body.high_skill, req.body.low_skill, req.body.last_name, req.body.race])
+  SqlRunner.run('INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill, trait, appearance, talent, mannerism, ideal, bond, flaw, birthplace) VALUES ($1, $6, $7, $2, $3, $4, $5, $8, $9, $10, $11, $12, $13, $14, $15)', [req.body.first_name, req.body.job, req.body.age, req.body.high_skill, req.body.low_skill, req.body.last_name, req.body.race, req.body.trait, req.body.appearance, req.body.talent, req.body.mannerism, req.body.ideal, req.body.bond, req.body.flaw, req.body.birthplace])
     .then((result) => {
       SqlRunner.run('SELECT * FROM non_player_chars')
         .then((result) => {

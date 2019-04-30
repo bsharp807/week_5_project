@@ -549,7 +549,7 @@ INSERT INTO skills (skill) VALUES ('Charisma');
 -- APPEARANCES
 
 INSERT INTO appearances (appearance) VALUES ('distinctive jewelry');
-INSERT INTO appearances (appearance) VALUES ('piercings');
+INSERT INTO appearances (appearance) VALUES ('piercing');
 INSERT INTO appearances (appearance) VALUES ('flamboyant clothes');
 INSERT INTO appearances (appearance) VALUES ('formal wear');
 INSERT INTO appearances (appearance) VALUES ('traditional wear');
@@ -609,7 +609,7 @@ INSERT INTO talents (talent) VALUES ('is an expert dart thrower and rock skipper
 INSERT INTO talents (talent) VALUES ('is an expert juggler');
 INSERT INTO talents (talent) VALUES ('is a skilled actor and master of disguise');
 INSERT INTO talents (talent) VALUES ('is a skilled dancer');
-INSERT INTO talents (talent) VALUES ('knows thieves cant');
+INSERT INTO talents (talent) VALUES ('knows the thieves secret tongue');
 
 -- MANNERISMS
 

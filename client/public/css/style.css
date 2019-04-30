@@ -131,6 +131,12 @@ a {
   font-size: 0.7em;
 }
 
+.display-description {
+  grid-column: 1 / span 3;
+  grid-row: 7;
+  font-size: 0.7em;
+}
+
 #list-container {
   display: none;
 }
