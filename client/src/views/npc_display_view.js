@@ -68,7 +68,7 @@ class NpcDisplayView {
 
     const description = document.createElement('div');
     description.classList.add('display-description', 'display-item');
-    description.innerHTML = `${data.first_name} ${data.last_name}, the ${data.race} ${data.job}, is ${data.trait} character whose ${data.appearance} the first thing you notice. They are ${data.age} years old, have a great aptitude in ${data.high_skill} but lack a bit in ${data.low_skill}. You have heard that they were born ${data.birthplace}. ${data.first_name} ${data.talent} but also ${data.mannerism}. They value  ${data.ideal} above all else, and are ${data.bond}. Finally, their biggest flaw is ${data.flaw}.`
+    description.innerHTML = `${data.first_name} ${data.last_name}, the ${data.race} ${data.job}, is ${data.trait} character whose ${data.appearance} the first thing you notice. They are ${data.age} years old, and what they lack in ${data.low_skill} they make up for in ${data.high_skill}. Rumour has it they were born ${data.birthplace}. ${data.first_name} ${data.talent} but also ${data.mannerism}. They value  ${data.ideal} above all else, and are ${data.bond}. Finally, their biggest flaw is ${data.flaw}.`
 
     card.appendChild(image);
     card.appendChild(header);
