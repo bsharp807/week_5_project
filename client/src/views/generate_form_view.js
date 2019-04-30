@@ -41,6 +41,7 @@ class GenerateFormView {
       npc.postData(newChar);
 
       this.hidden.style.visibility = 'hidden';
+      this.form.reset();
     })
   }
 

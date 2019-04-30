@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   npcDisplayView.bindEvents();
 
+  npc.listIdListener();
+
   listView.bindEvents();
 
   listButtonView.bindEvents();

@@ -20,6 +20,13 @@ class NPC {
       })
   }
 
+  listIdListener() {
+    PubSub.subscribe('ListView:id-from-card', (evt) => {
+      this.id = evt.detail.id;
+      this.getInitialDisplay();
+    })
+  }
+
   postData(npc) {
     const url = `http://localhost:3000/npc/`
     const request = new RequestHelper(url);

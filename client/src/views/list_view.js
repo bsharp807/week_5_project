@@ -5,6 +5,7 @@ class ListView {
   constructor() {
 
     this.container = document.querySelector('#list-display');
+    this.hidden = document.querySelector('#list-container');
 
   }
 
@@ -56,6 +57,11 @@ class ListView {
     card.appendChild(race);
     card.appendChild(job);
     card.appendChild(age);
+
+    card.addEventListener('click', () => {
+      this.hidden.style.display = 'none';
+      PubSub.publish('ListView:id-from-card', data);
+    })
 
     return card;
   }
