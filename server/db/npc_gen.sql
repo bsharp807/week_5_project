@@ -569,8 +569,8 @@ INSERT INTO appearances (appearance) VALUES ('Nervous Eye Twitch');
 INSERT INTO appearances (appearance) VALUES ('Distinctive Nose');
 INSERT INTO appearances (appearance) VALUES ('Distinctive, Crooked Posture');
 INSERT INTO appearances (appearance) VALUES ('Distinctive, Rigid Posture');
-INSERT INTO appearances (appearance) VALUES ('Exceptionally Beautiful');
-INSERT INTO appearances (appearance) VALUES ('Exceptionally Ugly');
+INSERT INTO appearances (appearance) VALUES ('Exceptional Beauty');
+INSERT INTO appearances (appearance) VALUES ('Exceptional Ugly');
 
 -- TRAITS
 
@@ -701,20 +701,20 @@ INSERT INTO bonds (bond) VALUES ('out for revenge against all those who wronged 
 
 -- FLAWS
 
-INSERT INTO flaws (flaw) VALUES ('forbidden love');
-INSERT INTO flaws (flaw) VALUES ('susceptibiluty to romance');
-INSERT INTO flaws (flaw) VALUES ('enjoyment decadent pleasures');
-INSERT INTO flaws (flaw) VALUES ('arrogance');
-INSERT INTO flaws (flaw) VALUES ('envy of anothers possessions');
-INSERT INTO flaws (flaw) VALUES ('envy of anothers station');
-INSERT INTO flaws (flaw) VALUES ('overpowering greed');
-INSERT INTO flaws (flaw) VALUES ('proneness to rage');
-INSERT INTO flaws (flaw) VALUES ('powerful enemy');
-INSERT INTO flaws (flaw) VALUES ('specific and overpowering phobia');
-INSERT INTO flaws (flaw) VALUES ('shameful and scandalous history');
-INSERT INTO flaws (flaw) VALUES ('secret crime');
-INSERT INTO flaws (flaw) VALUES ('possession of forbidden lore');
-INSERT INTO flaws (flaw) VALUES ('foolhardy bravery');
+INSERT INTO flaws (flaw) VALUES ('a forbidden love');
+INSERT INTO flaws (flaw) VALUES ('a susceptibiluty to romance');
+INSERT INTO flaws (flaw) VALUES ('an enjoyment decadent pleasures');
+INSERT INTO flaws (flaw) VALUES ('their arrogance');
+INSERT INTO flaws (flaw) VALUES ('an all-consuming envy of anothers possessions');
+INSERT INTO flaws (flaw) VALUES ('an all-consuming envy of anothers station');
+INSERT INTO flaws (flaw) VALUES ('an overpowering greed');
+INSERT INTO flaws (flaw) VALUES ('a proneness to rage');
+INSERT INTO flaws (flaw) VALUES ('a powerful enemy');
+INSERT INTO flaws (flaw) VALUES ('a specific and overpowering phobia');
+INSERT INTO flaws (flaw) VALUES ('a shameful and scandalous history');
+INSERT INTO flaws (flaw) VALUES ('a secret crime');
+INSERT INTO flaws (flaw) VALUES ('their possession of forbidden lore');
+INSERT INTO flaws (flaw) VALUES ('their foolhardy bravery');
 
 -- BIRTHPLACES
 
