@@ -308,11 +308,37 @@ INSERT INTO tiefling_names (name) VALUES ('Luna');
 INSERT INTO tiefling_names (name) VALUES ('Horn');
 INSERT INTO tiefling_names (name) VALUES ('Playwright');
 INSERT INTO tiefling_names (name) VALUES ('Brush');
-INSERT INTO tiefling_names (name) VALUES ('Sing');
+INSERT INTO tiefling_names (name) VALUES ('Singer');
+INSERT INTO tiefling_names (name) VALUES ('Lion');
+INSERT INTO tiefling_names (name) VALUES ('Axe');
+INSERT INTO tiefling_names (name) VALUES ('Plough');
+INSERT INTO tiefling_names (name) VALUES ('Greenfingers');
+INSERT INTO tiefling_names (name) VALUES ('Wordsmith');
+INSERT INTO tiefling_names (name) VALUES ('Barb');
 
 -- TIEFLING SURNAMES
 
-INSERT INTO tiefling_surnames (name) VALUES ('the Tiefling');
+INSERT INTO tiefling_surnames (name) VALUES ('the Wise');
+INSERT INTO tiefling_surnames (name) VALUES ('the Broken');
+INSERT INTO tiefling_surnames (name) VALUES ('the Strong');
+INSERT INTO tiefling_surnames (name) VALUES ('the Stout');
+INSERT INTO tiefling_surnames (name) VALUES ('the Redeemer');
+INSERT INTO tiefling_surnames (name) VALUES ('the Revenant');
+INSERT INTO tiefling_surnames (name) VALUES ('the Smart');
+INSERT INTO tiefling_surnames (name) VALUES ('the Charming');
+INSERT INTO tiefling_surnames (name) VALUES ('the Lithe');
+INSERT INTO tiefling_surnames (name) VALUES ('the Swift');
+INSERT INTO tiefling_surnames (name) VALUES ('the Unfettered');
+INSERT INTO tiefling_surnames (name) VALUES ('the Dominating');
+INSERT INTO tiefling_surnames (name) VALUES ('the Meek');
+INSERT INTO tiefling_surnames (name) VALUES ('the Unobtrusive');
+INSERT INTO tiefling_surnames (name) VALUES ('the Painter');
+INSERT INTO tiefling_surnames (name) VALUES ('the Librarian');
+INSERT INTO tiefling_surnames (name) VALUES ('the Follower');
+INSERT INTO tiefling_surnames (name) VALUES ('the Leader');
+INSERT INTO tiefling_surnames (name) VALUES ('the Quaint');
+INSERT INTO tiefling_surnames (name) VALUES ('the Bold');
+INSERT INTO tiefling_surnames (name) VALUES ('the Grand');
 
 -- DWARF NAMES
 
