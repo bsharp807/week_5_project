@@ -44,7 +44,39 @@ router.get('/', function(req, res) {
                                                     SqlRunner.run('SELECT * FROM dwarf_surnames')
                                                       .then((dwarSur) => {
                                                         allData.dwarf_surnames = dwarSur.rows;
-                                                        res.status(200).json(allData);
+                                                        SqlRunner.run('SELECT * FROM dragonborn_names')
+                                                          .then((dragNam) => {
+                                                            allData.dragonborn_names = dragNam.rows;
+                                                            SqlRunner.run('SELECT * FROM dragonborn_surnames')
+                                                              .then((dragSur) => {
+                                                                allData.dragonborn_surnames = dragSur.rows;
+                                                                SqlRunner.run('SELECT * FROM gnome_names')
+                                                                  .then((gnomeNam) => {
+                                                                    allData.gnome_names = gnomeNam.rows;
+                                                                    SqlRunner.run('SELECT * FROM gnome_surnames')
+                                                                      .then((gnomeSur) => {
+                                                                        allData.gnome_surnames = gnomeSur.rows;
+                                                                        SqlRunner.run('SELECT * FROM halfelf_names')
+                                                                          .then((helfNam) => {
+                                                                            allData.halfelf_names = helfNam.rows;
+                                                                            SqlRunner.run('SELECT * FROM halfelf_surnames')
+                                                                              .then((helfSur) => {
+                                                                                allData.halfelf_surnames = helfSur.rows;
+                                                                                SqlRunner.run('SELECT * FROM halfling_names')
+                                                                                  .then((lingNam) => {
+                                                                                    allData.halfling_names = lingNam.rows;
+                                                                                    SqlRunner.run('SELECT * FROM halfling_surnames')
+                                                                                      .then((lingSur) => {
+                                                                                        allData.halfling_surnames = lingSur.rows;
+                                                                                        res.status(200).json(allData);
+                                                                                      })
+                                                                                  })
+                                                                              })
+                                                                          })
+                                                                      })
+                                                                  })
+                                                              })
+                                                          })
                                                       })
                                                   })
                                               })

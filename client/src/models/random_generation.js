@@ -32,6 +32,18 @@ class RandomGeneration {
       case 'Dwarf':
         return this.randomDwarfFirstName();
         break;
+      case 'Dragonborn':
+        return this.randomDragonbornFirstName();
+        break;
+      case 'Halfelf':
+        return this.randomHalfelfFirstName();
+        break;
+      case 'Halfling':
+        return this.randomHalflingFirstName();
+        break;
+      case 'Gnome':
+        return this.randomGnomeFirstName();
+        break;
       default:
         return 'SWITCH ERROR FIRST NAME';
     }
@@ -53,6 +65,18 @@ class RandomGeneration {
         break;
       case 'Dwarf':
         return this.randomDwarfLastName();
+        break;
+      case 'Dragonborn':
+        return this.randomDragonbornLastName();
+        break;
+      case 'Halfelf':
+        return this.randomHalfelfLastName();
+        break;
+      case 'Halfling':
+        return this.randomHalflingLastName();
+        break;
+      case 'Gnome':
+        return this.randomGnomeLastName();
         break;
       default:
         return 'SWITCH ERROR LAST NAME';
@@ -89,9 +113,57 @@ class RandomGeneration {
     return firstName.name
   }
 
+  randomDragonbornFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.dragonborn_names);
+    return firstName.name
+  }
+
+  randomGnomeFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.gnome_names);
+    return firstName.name
+  }
+
+  randomHalfelfFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.halfelf_names);
+    return firstName.name
+  }
+
+  randomHalflingFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.halfling_names);
+    return firstName.name
+  }
+
   randomOrcLastName() {
     const rng = new RNG();
     const lastName = rng.randArray(this.data.orc_surnames);
+    return lastName.name
+  }
+
+  randomDragonbornLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.dragonborn_surnames);
+    return lastName.name
+  }
+
+  randomGnomeLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.gnome_surnames);
+    return lastName.name
+  }
+
+  randomHalfelfLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.halfelf_surnames);
+    return lastName.name
+  }
+
+  randomHalflingLastName() {
+    const rng = new RNG();
+    const lastName = rng.randArray(this.data.halfling_surnames);
     return lastName.name
   }
 
