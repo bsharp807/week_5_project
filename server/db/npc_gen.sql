@@ -741,7 +741,7 @@ INSERT INTO flaws (flaw) VALUES ('a proneness to rage');
 INSERT INTO flaws (flaw) VALUES ('a powerful enemy');
 INSERT INTO flaws (flaw) VALUES ('an overpowering arachnaphobia');
 INSERT INTO flaws (flaw) VALUES ('an overpowering acrophobia');
-INSERT INTO flaws (flaw) VALUES ('an overpowering agrophobia');
+INSERT INTO flaws (flaw) VALUES ('an overpowering agoraphobia');
 INSERT INTO flaws (flaw) VALUES ('an overpowering claustrophobia');
 INSERT INTO flaws (flaw) VALUES ('a shameful and scandalous history');
 INSERT INTO flaws (flaw) VALUES ('a secret crime they committed long ago');
