@@ -655,7 +655,7 @@ INSERT INTO mannerisms (mannerism) VALUES ('speaks loudly');
 INSERT INTO mannerisms (mannerism) VALUES ('talks only in whispers');
 INSERT INTO mannerisms (mannerism) VALUES ('frequently uses flowery speech');
 INSERT INTO mannerisms (mannerism) VALUES ('frequently uses long words');
-INSERT INTO mannerisms (mannerism) VALUES ('uses colourful oaths and exclamatiomns');
+INSERT INTO mannerisms (mannerism) VALUES ('uses colourful oaths and exclamations');
 INSERT INTO mannerisms (mannerism) VALUES ('makes constant jokes and puns');
 INSERT INTO mannerisms (mannerism) VALUES ('is prone to predictions of doom');
 INSERT INTO mannerisms (mannerism) VALUES ('fidgets constantly');
