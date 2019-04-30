@@ -22,7 +22,15 @@ DROP TABLE halfling_surnames;
 DROP TABLE races;
 DROP TABLE jobs;
 DROP TABLE skills;
+
 DROP TABLE traits;
+DROP TABLE appearances;
+DROP TABLE talents;
+DROP TABLE mannerisms;
+DROP TABLE ideals;
+DROP TABLE bonds;
+DROP TABLE flaws;
+DROP TABLE birthplaces;
 
 CREATE TABLE non_player_chars(
   id SERIAL8 PRIMARY KEY,
@@ -33,7 +41,14 @@ CREATE TABLE non_player_chars(
   age INT,
   high_skill VARCHAR(255),
   low_skill VARCHAR(255),
-  trait VARCHAR(1024)
+  trait VARCHAR(1024),
+  appearance VARCHAR(1024),
+  talent VARCHAR(1024),
+  mannerism VARCHAR(1024),
+  ideal VARCHAR(1024),
+  bond VARCHAR(1024),
+  flaw VARCHAR(1024),
+  birthplace VARCHAR(1024)
 );
 
 CREATE TABLE orc_names(
@@ -146,6 +161,41 @@ CREATE TABLE traits(
   trait VARCHAR(255)
 );
 
+CREATE TABLE appearances(
+  id SERIAL8 PRIMARY KEY,
+  appearance VARCHAR(255)
+);
+
+CREATE TABLE talents(
+  id SERIAL8 PRIMARY KEY,
+  talent VARCHAR(255)
+);
+
+CREATE TABLE mannerisms(
+  id SERIAL8 PRIMARY KEY,
+  mannerism VARCHAR(255)
+);
+
+CREATE TABLE ideals(
+  id SERIAL8 PRIMARY KEY,
+  ideal VARCHAR(255)
+);
+
+CREATE TABLE bonds(
+  id SERIAL8 PRIMARY KEY,
+  bond VARCHAR(255)
+);
+
+CREATE TABLE flaws(
+  id SERIAL8 PRIMARY KEY,
+  flaw VARCHAR(255)
+);
+
+CREATE TABLE birthplaces(
+  id SERIAL8 PRIMARY KEY,
+  birthplace VARCHAR(255)
+);
+
 -- INITIAL NPC
 
 INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill, trait)
@@ -224,6 +274,7 @@ INSERT INTO human_names (name) VALUES ('Sian');
 INSERT INTO human_names (name) VALUES ('Keith');
 INSERT INTO human_names (name) VALUES ('Bardem');
 INSERT INTO human_names (name) VALUES ('Blazes');
+INSERT INTO human_names (name) VALUES ('Frank');
 
 -- HUMAN SURNAMES
 
@@ -494,5 +545,194 @@ INSERT INTO skills (skill) VALUES ('Constitution');
 INSERT INTO skills (skill) VALUES ('Intelligence');
 INSERT INTO skills (skill) VALUES ('Wisdom');
 INSERT INTO skills (skill) VALUES ('Charisma');
+
+-- APPEARANCES
+
+INSERT INTO appearances (appearance) VALUES ('Distinctive Jewelry');
+INSERT INTO appearances (appearance) VALUES ('Piercings');
+INSERT INTO appearances (appearance) VALUES ('Flamboyant Clothes');
+INSERT INTO appearances (appearance) VALUES ('Formal Clothes');
+INSERT INTO appearances (appearance) VALUES ('Ragged, Dirty Clothes');
+INSERT INTO appearances (appearance) VALUES ('Pronounced Scar');
+INSERT INTO appearances (appearance) VALUES ('Missing Teeth');
+INSERT INTO appearances (appearance) VALUES ('Missing Fingers');
+INSERT INTO appearances (appearance) VALUES ('Unusual Eye Colour');
+INSERT INTO appearances (appearance) VALUES ('Heterochromia');
+INSERT INTO appearances (appearance) VALUES ('Tattoos');
+INSERT INTO appearances (appearance) VALUES ('Birthmark');
+INSERT INTO appearances (appearance) VALUES ('Unusual Skin Colour');
+INSERT INTO appearances (appearance) VALUES ('Bald');
+INSERT INTO appearances (appearance) VALUES ('Braided Beard');
+INSERT INTO appearances (appearance) VALUES ('Braided Hair');
+INSERT INTO appearances (appearance) VALUES ('Unusual Hair Colour');
+INSERT INTO appearances (appearance) VALUES ('Nervous Eye Twitch');
+INSERT INTO appearances (appearance) VALUES ('Distinctive Nose');
+INSERT INTO appearances (appearance) VALUES ('Distinctive, Crooked Posture');
+INSERT INTO appearances (appearance) VALUES ('Distinctive, Rigid Posture');
+INSERT INTO appearances (appearance) VALUES ('Exceptionally Beautiful');
+INSERT INTO appearances (appearance) VALUES ('Exceptionally Ugly');
+
+-- TRAITS
+
+INSERT INTO traits (trait) VALUES ('Argumentative');
+INSERT INTO traits (trait) VALUES ('Arrogant');
+INSERT INTO traits (trait) VALUES ('Blustering');
+INSERT INTO traits (trait) VALUES ('Rude');
+INSERT INTO traits (trait) VALUES ('Curious');
+INSERT INTO traits (trait) VALUES ('Friendly');
+INSERT INTO traits (trait) VALUES ('Honest');
+INSERT INTO traits (trait) VALUES ('Hot Tempered');
+INSERT INTO traits (trait) VALUES ('Irritable');
+INSERT INTO traits (trait) VALUES ('Ponderous');
+INSERT INTO traits (trait) VALUES ('Quiet');
+INSERT INTO traits (trait) VALUES ('Suspicious');
+
+-- TALENTS
+
+INSERT INTO talents (talent) VALUES ('plays a musical instrument');
+INSERT INTO talents (talent) VALUES ('speaks several languages fluently');
+INSERT INTO talents (talent) VALUES ('is ubelievably lucky');
+INSERT INTO talents (talent) VALUES ('has a perfect memory');
+INSERT INTO talents (talent) VALUES ('is great with animals');
+INSERT INTO talents (talent) VALUES ('is great with children');
+INSERT INTO talents (talent) VALUES ('is great at solving puzzles');
+INSERT INTO talents (talent) VALUES ('is great at one particular game');
+INSERT INTO talents (talent) VALUES ('is great at impressions');
+INSERT INTO talents (talent) VALUES ('draws beautifully');
+INSERT INTO talents (talent) VALUES ('paints beautifully');
+INSERT INTO talents (talent) VALUES ('sings beautifully');
+INSERT INTO talents (talent) VALUES ('drinks everyone under the table');
+INSERT INTO talents (talent) VALUES ('is an expert carpenter');
+INSERT INTO talents (talent) VALUES ('is an expert cook');
+INSERT INTO talents (talent) VALUES ('is an expert dart thrower and rock skipper');
+INSERT INTO talents (talent) VALUES ('is an expert juggler');
+INSERT INTO talents (talent) VALUES ('is a skilled actor and master of disguise');
+INSERT INTO talents (talent) VALUES ('is a skilled dancer');
+INSERT INTO talents (talent) VALUES ('knows thieves cant');
+
+-- MANNERISMS
+
+INSERT INTO mannerisms (mannerism) VALUES ('is prone to singing');
+INSERT INTO mannerisms (mannerism) VALUES ('is prone to whislting');
+INSERT INTO mannerisms (mannerism) VALUES ('is prone to humming quietly');
+INSERT INTO mannerisms (mannerism) VALUES ('speaks in rhyme');
+INSERT INTO mannerisms (mannerism) VALUES ('speaks in a peculiar way');
+INSERT INTO mannerisms (mannerism) VALUES ('has a particularly high pitched voice');
+INSERT INTO mannerisms (mannerism) VALUES ('has a particularly low pitched voice');
+INSERT INTO mannerisms (mannerism) VALUES ('slurs words');
+INSERT INTO mannerisms (mannerism) VALUES ('has a lisp');
+INSERT INTO mannerisms (mannerism) VALUES ('stutters');
+INSERT INTO mannerisms (mannerism) VALUES ('enunciates over clearly');
+INSERT INTO mannerisms (mannerism) VALUES ('speaks loudly');
+INSERT INTO mannerisms (mannerism) VALUES ('talks only in whispers');
+INSERT INTO mannerisms (mannerism) VALUES ('frequently uses flowery speech');
+INSERT INTO mannerisms (mannerism) VALUES ('frequently uses long words');
+INSERT INTO mannerisms (mannerism) VALUES ('uses colourful oaths and exclamatiomns');
+INSERT INTO mannerisms (mannerism) VALUES ('makes constant jokes and puns');
+INSERT INTO mannerisms (mannerism) VALUES ('is prone to predictions of doom');
+INSERT INTO mannerisms (mannerism) VALUES ('fidgets constantly');
+INSERT INTO mannerisms (mannerism) VALUES ('squints alot');
+INSERT INTO mannerisms (mannerism) VALUES ('frequently uses the wrong word');
+INSERT INTO mannerisms (mannerism) VALUES ('often stares into the distance');
+INSERT INTO mannerisms (mannerism) VALUES ('is always seen chewing something');
+INSERT INTO mannerisms (mannerism) VALUES ('has a tendency to pace alot');
+INSERT INTO mannerisms (mannerism) VALUES ('has a tendency to tap their fingers');
+INSERT INTO mannerisms (mannerism) VALUES ('has a tendency to bite their fingernails');
+INSERT INTO mannerisms (mannerism) VALUES ('has a tendency to twirl their hair');
+INSERT INTO mannerisms (mannerism) VALUES ('has a tendency to twirl their beard');
+
+-- IDEALS
+
+INSERT INTO ideals (ideal) VALUES ('Beauty');
+INSERT INTO ideals (ideal) VALUES ('Charity');
+INSERT INTO ideals (ideal) VALUES ('The Greater Good');
+INSERT INTO ideals (ideal) VALUES ('Life');
+INSERT INTO ideals (ideal) VALUES ('Repsect');
+INSERT INTO ideals (ideal) VALUES ('Self-Sacrifice');
+
+INSERT INTO ideals (ideal) VALUES ('Domination');
+INSERT INTO ideals (ideal) VALUES ('Greed');
+INSERT INTO ideals (ideal) VALUES ('Might');
+INSERT INTO ideals (ideal) VALUES ('Pain');
+INSERT INTO ideals (ideal) VALUES ('Retribution');
+INSERT INTO ideals (ideal) VALUES ('Vengeance');
+INSERT INTO ideals (ideal) VALUES ('Slaughter');
+
+INSERT INTO ideals (ideal) VALUES ('Community');
+INSERT INTO ideals (ideal) VALUES ('Fairness');
+INSERT INTO ideals (ideal) VALUES ('Honour');
+INSERT INTO ideals (ideal) VALUES ('Logic');
+INSERT INTO ideals (ideal) VALUES ('Responsibility');
+INSERT INTO ideals (ideal) VALUES ('Tradition');
+
+INSERT INTO ideals (ideal) VALUES ('Change');
+INSERT INTO ideals (ideal) VALUES ('Creativity');
+INSERT INTO ideals (ideal) VALUES ('Freedom');
+INSERT INTO ideals (ideal) VALUES ('Independence');
+INSERT INTO ideals (ideal) VALUES ('Progress');
+INSERT INTO ideals (ideal) VALUES ('whatever whim takes them');
+
+INSERT INTO ideals (ideal) VALUES ('Balance');
+INSERT INTO ideals (ideal) VALUES ('Knowledge');
+INSERT INTO ideals (ideal) VALUES ('a live and let live attitude');
+INSERT INTO ideals (ideal) VALUES ('Moderation');
+INSERT INTO ideals (ideal) VALUES ('Neutrality');
+INSERT INTO ideals (ideal) VALUES ('Peace');
+
+INSERT INTO ideals (ideal) VALUES ('Aspiration');
+INSERT INTO ideals (ideal) VALUES ('Discovery');
+INSERT INTO ideals (ideal) VALUES ('Glory');
+INSERT INTO ideals (ideal) VALUES ('their Nation');
+INSERT INTO ideals (ideal) VALUES ('Redemption');
+INSERT INTO ideals (ideal) VALUES ('Self-Improvement');
+
+-- BONDS
+
+INSERT INTO bonds (bond) VALUES ('dedicated to fulfilling their personal life goal');
+INSERT INTO bonds (bond) VALUES ('protective of close family members');
+INSERT INTO bonds (bond) VALUES ('protective of colleagues');
+INSERT INTO bonds (bond) VALUES ('protective of compatriots');
+INSERT INTO bonds (bond) VALUES ('loyal to their benefactor');
+INSERT INTO bonds (bond) VALUES ('captivated by a romantic interest');
+INSERT INTO bonds (bond) VALUES ('drawn to a special place');
+INSERT INTO bonds (bond) VALUES ('protective of a sentimental keepsake');
+INSERT INTO bonds (bond) VALUES ('protective of a valuable possession');
+INSERT INTO bonds (bond) VALUES ('out for revenge against all those who wronged them');
+
+-- FLAWS
+
+INSERT INTO flaws (flaw) VALUES ('forbidden love');
+INSERT INTO flaws (flaw) VALUES ('susceptibiluty to romance');
+INSERT INTO flaws (flaw) VALUES ('enjoyment decadent pleasures');
+INSERT INTO flaws (flaw) VALUES ('arrogance');
+INSERT INTO flaws (flaw) VALUES ('envy of anothers possessions');
+INSERT INTO flaws (flaw) VALUES ('envy of anothers station');
+INSERT INTO flaws (flaw) VALUES ('overpowering greed');
+INSERT INTO flaws (flaw) VALUES ('proneness to rage');
+INSERT INTO flaws (flaw) VALUES ('powerful enemy');
+INSERT INTO flaws (flaw) VALUES ('specific and overpowering phobia');
+INSERT INTO flaws (flaw) VALUES ('shameful and scandalous history');
+INSERT INTO flaws (flaw) VALUES ('secret crime');
+INSERT INTO flaws (flaw) VALUES ('possession of forbidden lore');
+INSERT INTO flaws (flaw) VALUES ('foolhardy bravery');
+
+-- BIRTHPLACES
+
+INSERT INTO birthplaces (birthplace) VALUES ('in a local tavern');
+INSERT INTO birthplaces (birthplace) VALUES ('across the sea');
+INSERT INTO birthplaces (birthplace) VALUES ('under a bridge');
+INSERT INTO birthplaces (birthplace) VALUES ('across the desert');
+INSERT INTO birthplaces (birthplace) VALUES ('in a yurt');
+INSERT INTO birthplaces (birthplace) VALUES ('in the sewers');
+INSERT INTO birthplaces (birthplace) VALUES ('under the auspices of the blood moon');
+INSERT INTO birthplaces (birthplace) VALUES ('into a noble family');
+INSERT INTO birthplaces (birthplace) VALUES ('in tragic circumstances');
+INSERT INTO birthplaces (birthplace) VALUES ('into a broken family');
+INSERT INTO birthplaces (birthplace) VALUES ('into a loving family');
+INSERT INTO birthplaces (birthplace) VALUES ('in a field');
+INSERT INTO birthplaces (birthplace) VALUES ('on a barn');
+INSERT INTO birthplaces (birthplace) VALUES ('in the slums');
+INSERT INTO birthplaces (birthplace) VALUES ('in the mountains');
+INSERT INTO birthplaces (birthplace) VALUES ('in the jungle');
 
 -- TESTS
