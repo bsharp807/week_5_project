@@ -601,18 +601,18 @@ INSERT INTO appearances (appearance) VALUES ('exceptional ugliness');
 
 -- TRAITS
 
-INSERT INTO traits (trait) VALUES ('argumentative');
-INSERT INTO traits (trait) VALUES ('arrogant');
-INSERT INTO traits (trait) VALUES ('blustering');
-INSERT INTO traits (trait) VALUES ('rude');
-INSERT INTO traits (trait) VALUES ('curious');
-INSERT INTO traits (trait) VALUES ('friendly');
-INSERT INTO traits (trait) VALUES ('honest');
-INSERT INTO traits (trait) VALUES ('hot tempered');
-INSERT INTO traits (trait) VALUES ('irritable');
-INSERT INTO traits (trait) VALUES ('ponderous');
-INSERT INTO traits (trait) VALUES ('quiet');
-INSERT INTO traits (trait) VALUES ('suspicious');
+INSERT INTO traits (trait) VALUES ('an argumentative');
+INSERT INTO traits (trait) VALUES ('an arrogant');
+INSERT INTO traits (trait) VALUES ('a blustering');
+INSERT INTO traits (trait) VALUES ('a rude');
+INSERT INTO traits (trait) VALUES ('a curious');
+INSERT INTO traits (trait) VALUES ('a friendly');
+INSERT INTO traits (trait) VALUES ('an honest');
+INSERT INTO traits (trait) VALUES ('a hot tempered');
+INSERT INTO traits (trait) VALUES ('an irritable');
+INSERT INTO traits (trait) VALUES ('a ponderous');
+INSERT INTO traits (trait) VALUES ('a quiet');
+INSERT INTO traits (trait) VALUES ('a suspicious');
 
 -- TALENTS
 
