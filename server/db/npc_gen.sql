@@ -198,8 +198,8 @@ CREATE TABLE birthplaces(
 
 -- INITIAL NPC
 
-INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill, trait)
-  VALUES ('Krunk', 'Grimmjow', 'Orc', 'Barbarian', '23', 'Strength', 'Intelligence', 'External extra jaw');
+INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill, trait, talent, mannerism, ideal, bond, flaw, birthplace)
+  VALUES ('Krunk', 'Grimmjow', 'Orc', 'Barbarian', '23', 'Strength', 'Intelligence', 'a melancholic', 'drinks everyone under the table', 'speaks loudly', 'Revenge', 'drawn to a special place', 'crippling depression', 'under a glass moon');
 
 -- ORC NAMES
 
@@ -614,6 +614,7 @@ INSERT INTO traits (trait) VALUES ('an irritable');
 INSERT INTO traits (trait) VALUES ('a ponderous');
 INSERT INTO traits (trait) VALUES ('a quiet');
 INSERT INTO traits (trait) VALUES ('a suspicious');
+INSERT INTO traits (trait) VALUES ('a melancholic');
 
 -- TALENTS
 
