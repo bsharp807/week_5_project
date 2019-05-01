@@ -2,6 +2,10 @@ body {
   font-family: "Exo 2", verdana, sans-serif;
   font-size: 1.5em;
   position: relative;
+  background-image: url('../images/background.jpg'), url('../images/backgroundtop.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: right bottom, left top;
+  background-attachment: fixed, fixed;
 }
 
 h1 {
@@ -96,20 +100,18 @@ a {
 
 .hidden-generate {
   position: fixed;
-  top: 15%;
+  top: 20%;
   z-index: 50;
-  border-style: solid;
-  border-width: 1px;
 
   text-align: center;
 
-  margin-top: 10%;
-  margin-left: 36%;
-  margin-right: 33%;
-
+  margin-top: 5%;
+  width: 35%;
+  margin-left: 31%;
+  margin-right: 39%;
   padding: 1%;
 
-  background-color: white;
+  height: 45%;
 
   opacity: 0;
 }
@@ -126,6 +128,19 @@ a {
   opacity: 0;
   pointer-events: none;
   cursor: default;
+}
+
+.generate-form {
+  font-size: 0.8em;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.form-header {
+  font-size: 1em;
 }
 
 .catch-all{
@@ -148,18 +163,17 @@ a {
 
 #display {
   text-align: left;
-  width: 50%;
-  margin-left: 31%;
-  margin-right: 39%;
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
   margin-top: 10px;
-
+  background-color: white;
 }
 
 .display-card {
   display: grid;
   grid-template-columns: 45% 55%;
   padding: 20px;
-  width: 70%;
   border-style: solid;
   border-width: thin;
 }
@@ -266,6 +280,7 @@ a {
   padding-right: 4px;
   cursor: pointer;
   flex: 2 1 1;
+  background-color: white;
 }
 
 .list-image {
