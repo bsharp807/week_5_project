@@ -4,7 +4,8 @@ DROP TABLE orc_names;
 DROP TABLE orc_surnames;
 DROP TABLE elf_names;
 DROP TABLE elf_surnames;
-DROP TABLE human_names;
+DROP TABLE female_human_names;
+DROP TABLE male_human_names;
 DROP TABLE human_surnames;
 DROP TABLE tiefling_names;
 DROP TABLE tiefling_surnames;
@@ -14,7 +15,8 @@ DROP TABLE dragonborn_names;
 DROP TABLE dragonborn_surnames;
 DROP TABLE gnome_names;
 DROP TABLE gnome_surnames;
-DROP TABLE halfelf_names;
+DROP TABLE female_halfelf_names;
+DROP TABLE male_halfelf_names;
 DROP TABLE halfelf_surnames;
 DROP TABLE halfling_names;
 DROP TABLE halfling_surnames;
@@ -77,7 +79,12 @@ CREATE TABLE human_names(
   name VARCHAR(255)
 );
 
-CREATE TABLE human_surnames(
+CREATE TABLE female_human_surnames(
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE male_human_surnames(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
@@ -122,7 +129,12 @@ CREATE TABLE gnome_surnames(
   name VARCHAR(255)
 );
 
-CREATE TABLE halfelf_names(
+CREATE TABLE male_halfelf_names(
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE female_halfelf_names(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
@@ -256,26 +268,33 @@ INSERT INTO elf_surnames (name) VALUES ('Yesran');
 
 -- HUMAN NAMES
 
-INSERT INTO human_names (name) VALUES ('Eowin');
-INSERT INTO human_names (name) VALUES ('Sara');
-INSERT INTO human_names (name) VALUES ('Judit');
-INSERT INTO human_names (name) VALUES ('Zach');
-INSERT INTO human_names (name) VALUES ('Adrian');
-INSERT INTO human_names (name) VALUES ('James');
-INSERT INTO human_names (name) VALUES ('Matthew');
-INSERT INTO human_names (name) VALUES ('Rose');
-INSERT INTO human_names (name) VALUES ('Hamish');
-INSERT INTO human_names (name) VALUES ('Euan');
-INSERT INTO human_names (name) VALUES ('Kris');
-INSERT INTO human_names (name) VALUES ('Reka');
-INSERT INTO human_names (name) VALUES ('Rod');
-INSERT INTO human_names (name) VALUES ('Pawel');
-INSERT INTO human_names (name) VALUES ('Ben');
-INSERT INTO human_names (name) VALUES ('Sian');
-INSERT INTO human_names (name) VALUES ('Keith');
-INSERT INTO human_names (name) VALUES ('Bardem');
-INSERT INTO human_names (name) VALUES ('Blazes');
-INSERT INTO human_names (name) VALUES ('Frank');
+INSERT INTO female_human_names (name) VALUES ('Eowin');
+INSERT INTO female_human_names (name) VALUES ('Sara');
+INSERT INTO female_human_names (name) VALUES ('Judit');
+INSERT INTO male_human_names (name) VALUES ('Zach');
+INSERT INTO male_human_names (name) VALUES ('Adrian');
+INSERT INTO female_human_names (name) VALUES ('Adrian');
+INSERT INTO male_human_names (name) VALUES ('James');
+INSERT INTO male_human_names (name) VALUES ('Matthew');
+INSERT INTO female_human_names (name) VALUES ('Rose');
+INSERT INTO male_human_names (name) VALUES ('Hamish');
+INSERT INTO male_human_names (name) VALUES ('Euan');
+INSERT INTO male_human_names (name) VALUES ('Kris');
+INSERT INTO female_human_names (name) VALUES ('Kris');
+INSERT INTO female_human_names (name) VALUES ('Reka');
+INSERT INTO male_human_names (name) VALUES ('Rod');
+INSERT INTO male_human_names (name) VALUES ('Pawel');
+INSERT INTO male_human_names (name) VALUES ('Ben');
+INSERT INTO female_human_names (name) VALUES ('Sian');
+INSERT INTO female_human_names (name) VALUES ('Vikki');
+INSERT INTO female_human_names (name) VALUES ('Laherl');
+INSERT INTO female_human_names (name) VALUES ('Evelyn');
+INSERT INTO female_human_names (name) VALUES ('Dido');
+INSERT INTO female_human_names (name) VALUES ('Catherine');
+INSERT INTO male_human_names (name) VALUES ('Keith');
+INSERT INTO male_human_names (name) VALUES ('Bardem');
+INSERT INTO male_human_names (name) VALUES ('Blazes');
+INSERT INTO male_human_names (name) VALUES ('Frank');
 
 -- HUMAN SURNAMES
 
@@ -370,38 +389,58 @@ INSERT INTO dwarf_surnames (name) VALUES ('Grandsmith');
 
 -- HALFELF NAMES
 
-INSERT INTO halfelf_names (name) VALUES ('Eowin');
-INSERT INTO halfelf_names (name) VALUES ('Sara');
-INSERT INTO halfelf_names (name) VALUES ('Judit');
-INSERT INTO halfelf_names (name) VALUES ('Zach');
-INSERT INTO halfelf_names (name) VALUES ('Adrian');
-INSERT INTO halfelf_names (name) VALUES ('James');
-INSERT INTO halfelf_names (name) VALUES ('Matthew');
-INSERT INTO halfelf_names (name) VALUES ('Rose');
-INSERT INTO halfelf_names (name) VALUES ('Hamish');
-INSERT INTO halfelf_names (name) VALUES ('Euan');
-INSERT INTO halfelf_names (name) VALUES ('Kris');
-INSERT INTO halfelf_names (name) VALUES ('Reka');
-INSERT INTO halfelf_names (name) VALUES ('Rod');
-INSERT INTO halfelf_names (name) VALUES ('Pawel');
-INSERT INTO halfelf_names (name) VALUES ('Ben');
-INSERT INTO halfelf_names (name) VALUES ('Sian');
-INSERT INTO halfelf_names (name) VALUES ('Keith');
-INSERT INTO halfelf_names (name) VALUES ('Bardem');
-INSERT INTO halfelf_names (name) VALUES ('Blazes');
-INSERT INTO halfelf_names (name) VALUES ('Volodar');
-INSERT INTO halfelf_names (name) VALUES ('Elen');
-INSERT INTO halfelf_names (name) VALUES ('Agandaur');
-INSERT INTO halfelf_names (name) VALUES ('Theodmer');
-INSERT INTO halfelf_names (name) VALUES ('Lafarallin');
-INSERT INTO halfelf_names (name) VALUES ('Varys');
-INSERT INTO halfelf_names (name) VALUES ('Adresin');
-INSERT INTO halfelf_names (name) VALUES ('Pywaln');
-INSERT INTO halfelf_names (name) VALUES ('Galaeron');
-INSERT INTO halfelf_names (name) VALUES ('Elpharae');
-INSERT INTO halfelf_names (name) VALUES ('Laerdya');
-INSERT INTO halfelf_names (name) VALUES ('Usamea');
-INSERT INTO halfelf_names (name) VALUES ('Elanil');
+INSERT INTO female_halfelf_names (name) VALUES ('Eowin');
+INSERT INTO female_halfelf_names (name) VALUES ('Sara');
+INSERT INTO female_halfelf_names (name) VALUES ('Judit');
+INSERT INTO male_halfelf_names (name) VALUES ('Zach');
+INSERT INTO male_halfelf_names (name) VALUES ('Adrian');
+INSERT INTO female_halfelf_names (name) VALUES ('Adrian');
+INSERT INTO male_halfelf_names (name) VALUES ('James');
+INSERT INTO male_halfelf_names (name) VALUES ('Matthew');
+INSERT INTO female_halfelf_names (name) VALUES ('Rose');
+INSERT INTO male_halfelf_names (name) VALUES ('Hamish');
+INSERT INTO male_halfelf_names (name) VALUES ('Euan');
+INSERT INTO male_halfelf_names (name) VALUES ('Kris');
+INSERT INTO female_halfelf_names (name) VALUES ('Kris');
+INSERT INTO male_halfelf_names (name) VALUES ('Reka');
+INSERT INTO male_halfelf_names (name) VALUES ('Rod');
+INSERT INTO male_halfelf_names (name) VALUES ('Pawel');
+INSERT INTO male_halfelf_names (name) VALUES ('Ben');
+INSERT INTO female_halfelf_names (name) VALUES ('Sian');
+INSERT INTO male_halfelf_names (name) VALUES ('Keith');
+INSERT INTO male_halfelf_names (name) VALUES ('Bardem');
+INSERT INTO male_halfelf_names (name) VALUES ('Blazes');
+INSERT INTO male_halfelf_names (name) VALUES ('Volodar');
+INSERT INTO male_halfelf_names (name) VALUES ('Elen');
+INSERT INTO male_halfelf_names (name) VALUES ('Agandaur');
+INSERT INTO male_halfelf_names (name) VALUES ('Theodmer');
+INSERT INTO male_halfelf_names (name) VALUES ('Lafarallin');
+INSERT INTO male_halfelf_names (name) VALUES ('Varys');
+INSERT INTO male_halfelf_names (name) VALUES ('Adresin');
+INSERT INTO male_halfelf_names (name) VALUES ('Pywaln');
+INSERT INTO male_halfelf_names (name) VALUES ('Galaeron');
+INSERT INTO male_halfelf_names (name) VALUES ('Elpharae');
+INSERT INTO male_halfelf_names (name) VALUES ('Laerdya');
+INSERT INTO male_halfelf_names (name) VALUES ('Usamea');
+INSERT INTO male_halfelf_names (name) VALUES ('Elanil');
+INSERT INTO female_halfelf_names (name) VALUES ('Vikki');
+INSERT INTO female_halfelf_names (name) VALUES ('Laherl');
+INSERT INTO female_halfelf_names (name) VALUES ('Evelyn');
+INSERT INTO female_halfelf_names (name) VALUES ('Dido');
+INSERT INTO female_halfelf_names (name) VALUES ('Catherine');
+INSERT INTO female_halfelf_names (name) VALUES ('Volodar');
+INSERT INTO female_halfelf_names (name) VALUES ('Elen');
+INSERT INTO female_halfelf_names (name) VALUES ('Agandaur');
+INSERT INTO female_halfelf_names (name) VALUES ('Theodmer');
+INSERT INTO female_halfelf_names (name) VALUES ('Lafarallin');
+INSERT INTO female_halfelf_names (name) VALUES ('Varys');
+INSERT INTO female_halfelf_names (name) VALUES ('Adresin');
+INSERT INTO female_halfelf_names (name) VALUES ('Pywaln');
+INSERT INTO female_halfelf_names (name) VALUES ('Galaeron');
+INSERT INTO female_halfelf_names (name) VALUES ('Elpharae');
+INSERT INTO female_halfelf_names (name) VALUES ('Laerdya');
+INSERT INTO female_halfelf_names (name) VALUES ('Usamea');
+INSERT INTO female_halfelf_names (name) VALUES ('Elanil');
 
 -- HALFELF SURNAMES
 
