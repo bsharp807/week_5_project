@@ -74,17 +74,17 @@ CREATE TABLE elf_surnames(
   name VARCHAR(255)
 );
 
-CREATE TABLE human_names(
+CREATE TABLE human_surnames(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
 
-CREATE TABLE female_human_surnames(
+CREATE TABLE female_human_names(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
 
-CREATE TABLE male_human_surnames(
+CREATE TABLE male_human_names(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255)
 );
