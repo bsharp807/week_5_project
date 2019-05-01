@@ -50,22 +50,6 @@ class NpcDisplayView {
     age.classList.add('display-age', 'display-item');
     age.innerHTML = data.age;
 
-    const highSkillHeading = document.createElement('div');
-    highSkillHeading.classList.add('display-highSkillHeading', 'display-item');
-    highSkillHeading.innerHTML = 'High Skill';
-
-    const highSkill = document.createElement('div');
-    highSkill.classList.add('display-highSkill', 'display-item');
-    highSkill.innerHTML = data.high_skill;
-
-    const lowSkillHeading = document.createElement('div');
-    lowSkillHeading.classList.add('display-lowSkillHeading', 'display-item');
-    lowSkillHeading.innerHTML = 'Low Skill';
-
-    const lowSkill = document.createElement('div');
-    lowSkill.classList.add('display-lowSkill', 'display-item');
-    lowSkill.innerHTML = data.low_skill;
-
     const description = document.createElement('div');
     description.classList.add('display-description', 'display-item');
     description.innerHTML = `${data.first_name} ${data.last_name}, the ${data.race} ${data.job}, is ${data.trait} character whose ${data.appearance} the first thing you notice. They are ${data.age} years old, and what they lack in ${data.low_skill} they make up for in ${data.high_skill}. Rumour has it they were born ${data.birthplace}. ${data.first_name} ${data.talent} but also ${data.mannerism}. They value  ${data.ideal} above all else, and are ${data.bond}. Finally, their biggest flaw is ${data.flaw}.`
@@ -75,10 +59,6 @@ class NpcDisplayView {
     card.appendChild(race);
     card.appendChild(job);
     card.appendChild(age);
-    card.appendChild(highSkillHeading);
-    card.appendChild(highSkill);
-    card.appendChild(lowSkillHeading);
-    card.appendChild(lowSkill);
     card.appendChild(description);
 
     return card;
