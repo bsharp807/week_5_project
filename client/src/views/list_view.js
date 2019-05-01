@@ -6,6 +6,9 @@ class ListView {
 
     this.container = document.querySelector('#list-display');
     this.hidden = document.querySelector('#list-container');
+    this.display = document.querySelector('#display-page');
+    this.overallHeader = document.querySelector('#overall-header');
+    this.secondHeader = document.querySelector('#second-header');
 
   }
 
@@ -59,11 +62,38 @@ class ListView {
     card.appendChild(age);
 
     card.addEventListener('click', () => {
-      this.hidden.style.display = 'none';
+      this.listFadeOut();
+      this.displayFadeIn();
+      this.fadeSecondHeader();
+      this.fadeInOverallHeader();
       PubSub.publish('ListView:id-from-card', data);
     })
 
     return card;
+  }
+
+  listFadeOut() {
+    this.hidden.style.transitionDelay = '0s';
+    this.hidden.classList.add('fade');
+    this.hidden.classList.remove('fadeIn');
+  }
+
+  displayFadeIn() {
+    this.display.style.transitionDelay = '0.8s';
+    this.display.classList.add('fadeIn');
+    this.display.classList.remove('fade');
+  }
+
+  fadeSecondHeader() {
+    this.secondHeader.style.transitionDelay = '0s';
+    this.secondHeader.classList.add('fade');
+    this.secondHeader.classList.remove('fadeIn');
+  }
+
+  fadeInOverallHeader() {
+    this.overallHeader.style.transitionDelay = '0.8s';
+    this.overallHeader.classList.add('fadeIn');
+    this.overallHeader.classList.remove('fade');
   }
 
 }

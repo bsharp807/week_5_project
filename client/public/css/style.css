@@ -12,6 +12,54 @@ a {
   color: #00B7FF;
 }
 
+.overall-header {
+  opacity: 1;
+}
+
+.overall-header.fade {
+  transition: opacity 0.75s;
+  -webkit-transition: opacity 0.75s;
+  opacity: 0;
+}
+
+.overall-header.fadeIn {
+  transition: opacity 1.1s;
+  -webkit-transition: opacity 1.1s;
+  opacity: 1;
+}
+
+.second-header {
+  opacity: 0;
+}
+
+.second-header.fade {
+  transition: opacity 0.75s;
+  -webkit-transition: opacity 0.75s;
+  opacity: 0;
+}
+
+.second-header.fadeIn {
+  transition: opacity 1.1s;
+  -webkit-transition: opacity 1.1s;
+  opacity: 1;
+}
+
+.display-page {
+  background-color: white;
+}
+
+.display-page.fade {
+  transition: opacity 0.75s;
+  -webkit-transition: opacity 0.75s;
+  opacity: 0;
+}
+
+.display-page.fadeIn {
+  transition: opacity 1.1s;
+  -webkit-transition: opacity 1.1s;
+  opacity: 1;
+}
+
 .initial-buttons {
   text-align: center;
 }
@@ -137,11 +185,23 @@ a {
   font-size: 0.7em;
 }
 
-#list-container {
-  display: none;
+.list-container {
+  opacity: 0;
 }
 
-#list-display {
+.list-container.fadeIn {
+  transition: opacity 1.1s;
+  -webkit-transition: opacity 1.1s;
+  opacity: 1;
+}
+
+.list-container.fade {
+  transition: opacity 0.75s;
+  -webkit-transition: opacity 0.75s;
+  opacity: 0;
+}
+
+.list-display {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

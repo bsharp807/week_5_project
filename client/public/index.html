@@ -8,107 +8,110 @@
 </head>
 
 <body>
-  <h1>NPC Gen</h1>
+  <h1 class="overall-header" id="overall-header">D&D 5e NPC Generator</h1>
+  <h1 class="second-header" id="second-header">List of NPCs</h1>
 
-  <div class="initial-buttons">
-    <button type="button" id="generate-button" name="generate" class="initial-button">Generate</button>
-    <button type="button" id="random-button" name="random" class="initial-button">Random</button>
-    <button type="button" id="list-button" name="list" class="initial-button">List</button>
+  <div class="display-page" id="display-page">
+    <div class="initial-buttons">
+      <button type="button" id="generate-button" name="generate" class="initial-button">Generate</button>
+      <button type="button" id="random-button" name="random" class="initial-button">Random</button>
+      <button type="button" id="list-button" name="list" class="initial-button">List</button>
+    </div>
+
+    <div class="hidden-generate" id="hidden-generate">
+
+      <form autocomplete="off" class="generate-form" id="generate-form">
+
+        <div id="firstName">
+          <div class="text-input">
+            <label for="firstName">First Name<label>
+              <input type="text" name="firstName" />
+              <input type="button" name="firstNameRNG" value="Random" id="firstNameRNG" />
+          </div>
+        </div>
+
+        <div id="lastName">
+          <div class="text-input">
+            <label for="lastName">Last Name<label>
+              <input type="text" name="lastName" />
+              <input type="button" name="lastNameRNG" value="Random" id="lastNameRNG" />
+          </div>
+        </div>
+
+        <div id="age">
+          <div class="number-input">
+            <label for="age">Age<label>
+              <input type="number" name="age" min="14" value="14" />
+              <input type="button" name="ageRNG" value="Random" id="ageRNG" />
+          </div>
+        </div>
+
+        <div id="race">
+          <div class="dropdown-input">
+            <label for="race">Race<label>
+              <select name="race">
+
+                <option value="Dwarf">Dwarf</option>
+                <option value="Dragonborn">Dragonborn</option>
+                <option value="Elf">Elf</option>
+                <option value="Gnome">Gnome</option>
+                <option value="Halfelf">Halfelf</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Human">Human</option>
+                <option value="Orc">Orc</option>
+                <option value="Tiefling">Tiefling</option>
+
+              </select>
+              <input type="button" name="raceRNG" value="Random" id="raceRNG" />
+          </div>
+        </div>
+
+        <div id="jobs">
+          <div class="dropdown-input">
+            <label for="jobs">Class<label>
+              <select name="jobs">
+
+                <option value="Barbarian">Barbarian</option>
+                <option value=<"Bard">Bard</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Druid">Druid</option>
+                <option value="Fighter">Fighter</option>
+                <option value="Monk">Monk</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Ranger">Ranger</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Sorceror">Sorceror</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Wizard">Wizard</option>
+
+              </select>
+              <input type="button" name="jobRNG" value="Random" id="jobRNG" />
+          </div>
+        </div>
+
+        <div id="gender">
+          <div class="radio-input">
+            <input type="radio" name="gender" value="female" checked="checked">Female
+            <input type="radio" name="gender" value="male">Male
+          </div>
+        </div>
+
+        <div id="submit">
+          <div class="submit">
+            <input type="submit" name="submit" id="submit-button" class="submit-button" value="Submit" />
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+    <div id="display">
+    </div>
   </div>
 
-  <div class="hidden-generate" id="hidden-generate">
-
-    <form autocomplete="off" class="generate-form" id="generate-form">
-
-      <div id="firstName">
-        <div class="text-input">
-          <label for="firstName">First Name<label>
-            <input type="text" name="firstName" />
-            <input type="button" name="firstNameRNG" value="Random" id="firstNameRNG" />
-        </div>
-      </div>
-
-      <div id="lastName">
-        <div class="text-input">
-          <label for="lastName">Last Name<label>
-            <input type="text" name="lastName" />
-            <input type="button" name="lastNameRNG" value="Random" id="lastNameRNG" />
-        </div>
-      </div>
-
-      <div id="age">
-        <div class="number-input">
-          <label for="age">Age<label>
-            <input type="number" name="age" min="14" value="14" />
-            <input type="button" name="ageRNG" value="Random" id="ageRNG" />
-        </div>
-      </div>
-
-      <div id="race">
-        <div class="dropdown-input">
-          <label for="race">Race<label>
-            <select name="race">
-
-              <option value="Dwarf">Dwarf</option>
-              <option value="Dragonborn">Dragonborn</option>
-              <option value="Elf">Elf</option>
-              <option value="Gnome">Gnome</option>
-              <option value="Halfelf">Halfelf</option>
-              <option value="Halfling">Halfling</option>
-              <option value="Human">Human</option>
-              <option value="Orc">Orc</option>
-              <option value="Tiefling">Tiefling</option>
-
-            </select>
-            <input type="button" name="raceRNG" value="Random" id="raceRNG" />
-        </div>
-      </div>
-
-      <div id="jobs">
-        <div class="dropdown-input">
-          <label for="jobs">Class<label>
-            <select name="jobs">
-
-              <option value="Barbarian">Barbarian</option>
-              <option value=<"Bard">Bard</option>
-              <option value="Cleric">Cleric</option>
-              <option value="Druid">Druid</option>
-              <option value="Fighter">Fighter</option>
-              <option value="Monk">Monk</option>
-              <option value="Paladin">Paladin</option>
-              <option value="Ranger">Ranger</option>
-              <option value="Rogue">Rogue</option>
-              <option value="Sorceror">Sorceror</option>
-              <option value="Warlock">Warlock</option>
-              <option value="Wizard">Wizard</option>
-
-            </select>
-            <input type="button" name="jobRNG" value="Random" id="jobRNG" />
-        </div>
-      </div>
-
-      <div id="gender">
-        <div class="radio-input">
-          <input type="radio" name="gender" value="female" checked="checked">Female
-          <input type="radio" name="gender" value="male">Male
-        </div>
-      </div>
-
-      <div id="submit">
-        <div class="submit">
-          <input type="submit" name="submit" id="submit-button" class="submit-button" value="Submit" />
-        </div>
-      </div>
-
-    </form>
-
-  </div>
-
-  <div id="display">
-  </div>
-
-  <div id="list-container">
-    <div id="list-display">
+  <div id="list-container" class="list-container">
+    <div id="list-display" class="list-display">
     </div>
   </div>
 
