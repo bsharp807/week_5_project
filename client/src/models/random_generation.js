@@ -324,7 +324,6 @@ class RandomGeneration {
   randomGender() {
     const rng = new RNG();
     const decider = rng.randNum(2,1);
-    console.log(decider);
     switch(decider) {
       case 1:
         return 'female';
