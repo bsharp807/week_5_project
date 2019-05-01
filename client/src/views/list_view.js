@@ -38,6 +38,7 @@ class ListView {
 
     const image = document.createElement('img');
     image.classList.add('list-image');
+    image.src = `../images/${data.gender}/${data.race}.jpg`;    
 
     const header = document.createElement('div');
     header.classList.add('list-header');
@@ -67,6 +68,7 @@ class ListView {
       this.fadeSecondHeader();
       this.fadeInOverallHeader();
       PubSub.publish('ListView:id-from-card', data);
+      this.clearList();
     })
 
     return card;
@@ -96,6 +98,9 @@ class ListView {
     this.overallHeader.classList.remove('fade');
   }
 
+  clearList() {
+    this.container.innerHTML = '';
+  }
 }
 
 module.exports = ListView;

@@ -50,5 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   npc.getInitialDisplay();
   table.getTableData();
-  list.getListData();
 });

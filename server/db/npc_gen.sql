@@ -402,7 +402,7 @@ INSERT INTO male_halfelf_names (name) VALUES ('Hamish');
 INSERT INTO male_halfelf_names (name) VALUES ('Euan');
 INSERT INTO male_halfelf_names (name) VALUES ('Kris');
 INSERT INTO female_halfelf_names (name) VALUES ('Kris');
-INSERT INTO male_halfelf_names (name) VALUES ('Reka');
+INSERT INTO female_halfelf_names (name) VALUES ('Reka');
 INSERT INTO male_halfelf_names (name) VALUES ('Rod');
 INSERT INTO male_halfelf_names (name) VALUES ('Pawel');
 INSERT INTO male_halfelf_names (name) VALUES ('Ben');
