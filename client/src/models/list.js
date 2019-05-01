@@ -9,6 +9,12 @@ class List {
 
   }
 
+  bindEvents() {
+    PubSub.subscribe('ListButtonView:list-button-clicked', () => {
+      this.getListData();
+    })
+  }
+
   getListData() {
     const url = `http://localhost:3000/npc/`
     const request = new RequestHelper(url);

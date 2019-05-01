@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   listButtonView.bindEvents();
 
+  list.bindEvents();
+
   generateButtonView.bindEvents();
 
   randomGeneration.receiveTableData();

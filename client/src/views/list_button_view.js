@@ -1,3 +1,5 @@
+const PubSub = require('../helpers/pub_sub.js');
+
 class ListButtonView {
 
   constructor() {
@@ -10,6 +12,7 @@ class ListButtonView {
   bindEvents() {
     this.button.addEventListener('click', () => {
       this.container.style.display = 'block';
+      PubSub.publish('ListButtonView:list-button-clicked');
     })
   }
 }
