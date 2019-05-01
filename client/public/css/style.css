@@ -36,7 +36,7 @@ a {
   opacity: 0;
   position: absolute;
   top: 0px;
-  right: 40%;
+  right: 45%;
   text-align: center;
 }
 
@@ -113,8 +113,8 @@ a {
 #display {
   text-align: left;
   width: 50%;
-  margin-left: 32%;
-  margin-right: 38%;
+  margin-left: 31%;
+  margin-right: 39%;
   margin-top: 10px;
 
 }
