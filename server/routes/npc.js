@@ -4,7 +4,7 @@ var SqlRunner = require('../db/sql_runner');
 
 // GET all characters
 router.get('/', function(req, res) {
-  SqlRunner.run('SELECT * FROM non_player_chars')
+  SqlRunner.run('SELECT * FROM non_player_chars ORDER BY first_name ASC')
     .then((char) => {
       res.status(200).json(char.rows);
     });
@@ -17,14 +17,6 @@ router.get('/:id', function(req, res) {
       res.status(200).json(char.rows);
     });
 });
-
-//CREATE JSON FILE -- DOES NOT WORK
-router.get('/orc', function(req, res) {
-  SqlRunner.run('SELECT * FROM orc_male_names')
-    .then((name) => {
-      res.status(200).json(name.rows)
-    })
-})
 
 //ADD character
 router.post('/', function(req, res) {
