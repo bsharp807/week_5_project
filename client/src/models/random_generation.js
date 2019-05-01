@@ -261,6 +261,21 @@ class RandomGeneration {
     const birthplace = rng.randArray(this.data.birthplaces);
     return birthplace.birthplace;
   }
+
+  randomGender() {
+    const rng = new RNG();
+    const decider = rng.randNum(1,1);
+    switch(decider) {
+      case 1:
+        return 'female';
+        break;
+      case 2:
+        return 'male';
+        break;
+      default:
+        return 'ERROR IN GENDER SWITCH';
+    }
+  }
 }
 
 module.exports = RandomGeneration;
