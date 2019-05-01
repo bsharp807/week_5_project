@@ -83,6 +83,19 @@ class RandomGeneration {
     }
   }
 
+  genderedRaceNameFilter(race, gender) {
+    switch(gender) {
+      case 'female':
+        return this.filteredFemaleFirstName(race);
+        break;
+       case 'male':
+        return this.filteredMaleFirstName(race);
+        break;
+      default:
+        return 'SWITCH ERROR GENDERED RACE FILTER';
+    }
+  }
+
   filteredLastName(race) {
     switch(race){
       case 'Orc':

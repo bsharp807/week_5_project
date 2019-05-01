@@ -23,10 +23,11 @@ class GenerateFormView {
       const input = evt.target;
 
       newChar.race = input.race.value;
+      newChar.gender = input.gender.value;
 
       if(input.firstName.value) {
         newChar.first_name = input.firstName.value;
-      } else {newChar.first_name = rand.filteredFirstName(newChar.race)}
+      } else {newChar.first_name = rand.genderedRaceNameFilter(newChar.race, newChar.gender)}
 
       if(input.lastName.value) {
         newChar.last_name = input.lastName.value;
@@ -34,6 +35,16 @@ class GenerateFormView {
 
       newChar.job = input.jobs.value;
       newChar.age = input.age.value;
+
+      newChar.trait = rand.randomTrait();
+      newChar.appearance = rand.randomAppearance();
+      newChar.talent = rand.randomTalent();
+      newChar.mannerism = rand.randomMannerism();
+      newChar.ideal = rand.randomIdeal();
+      newChar.bond = rand.randomBond();
+      newChar.birthplace = rand.randomBirthplace();
+      newChar.flaw = rand.randomFlaw();
+
       newChar.high_skill = rand.randomSkill();
       newChar.low_skill = rand.randomSkill();
 
@@ -47,7 +58,7 @@ class GenerateFormView {
 
   firstNameRNGButton(rand) {
     this.firstNameRNG.addEventListener('click', () => {
-      this.form.firstName.value = rand.filteredFirstName(this.form.race.value);
+      this.form.firstName.value = rand.genderedRaceNameFilter(this.form.race.value, this.form.gender.value);
     })
   }
 
