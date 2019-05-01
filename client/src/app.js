@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   generateFormView.ageRNGButton(randomGeneration);
   generateFormView.raceRNGButton(randomGeneration);
   generateFormView.jobRNGButton(randomGeneration);
+  generateFormView.cancelButton();
 
   npc.getInitialDisplay();
   table.getTableData();

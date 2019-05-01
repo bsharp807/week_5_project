@@ -12,6 +12,7 @@ class GenerateFormView {
     this.ageRNG = document.querySelector('#ageRNG');
     this.raceRNG = document.querySelector('#raceRNG');
     this.jobRNG = document.querySelector('#jobRNG');
+    this.cancel = document.querySelector('#cancel');
 
   }
 
@@ -83,6 +84,12 @@ class GenerateFormView {
   jobRNGButton(rand) {
     this.jobRNG.addEventListener('click', () => {
       this.form.jobs.value = rand.randomJob();
+    })
+  }
+
+  cancelButton() {
+    this.cancel.addEventListener('click', () =>{
+      this.updateStyle();
     })
   }
 
