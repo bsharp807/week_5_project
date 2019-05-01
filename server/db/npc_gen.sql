@@ -211,8 +211,8 @@ CREATE TABLE birthplaces(
 
 -- INITIAL NPC
 
-INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill, trait, talent, mannerism, ideal, bond, flaw, birthplace, appearance)
-  VALUES ('Krunk', 'Grimmjow', 'Orc', 'Barbarian', '23', 'Strength', 'Intelligence', 'a melancholic', 'drinks everyone under the table', 'speaks loudly', 'Revenge', 'drawn to a special place', 'crippling depression', 'under a glass moon', 'strange jawline');
+INSERT INTO non_player_chars (first_name, last_name, race, job, age, high_skill, low_skill, trait, talent, mannerism, ideal, bond, flaw, birthplace, appearance, gender)
+  VALUES ('Krunk', 'Grimmjow', 'Orc', 'Barbarian', '23', 'Strength', 'Intelligence', 'a melancholic', 'drinks everyone under the table', 'speaks loudly', 'Revenge', 'drawn to a special place', 'crippling depression', 'under a glass moon', 'strange jawline', 'male');
 
 -- ORC NAMES
 

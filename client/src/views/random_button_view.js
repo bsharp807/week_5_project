@@ -43,8 +43,6 @@ class RandomButtonView {
         newChar.low_skill = rand.randomSkill();
       }
 
-      console.log(newChar);
-
       const npc = new NPC();
       npc.postData(newChar);
     })

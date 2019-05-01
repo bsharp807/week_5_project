@@ -32,7 +32,7 @@ class NpcDisplayView {
 
     const image = document.createElement('img');
     image.classList.add('display-image', 'display-item');
-    image.src = `../images/${data.race}.jpg`;
+    image.src = `../images/${data.gender}/${data.race}.jpg`;
 
     const header = document.createElement('div');
     header.classList.add('display-header', 'display-item');
