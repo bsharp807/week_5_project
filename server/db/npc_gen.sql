@@ -803,7 +803,7 @@ INSERT INTO birthplaces (birthplace) VALUES ('in a yurt');
 INSERT INTO birthplaces (birthplace) VALUES ('in the sewers');
 INSERT INTO birthplaces (birthplace) VALUES ('under the auspices of the blood moon');
 INSERT INTO birthplaces (birthplace) VALUES ('into a noble family');
-INSERT INTO birthplaces (birthplace) VALUES ('in tragic circumstances');
+INSERT INTO birthplaces (birthplace) VALUES ('under tragic circumstances');
 INSERT INTO birthplaces (birthplace) VALUES ('into a broken family');
 INSERT INTO birthplaces (birthplace) VALUES ('into a loving family');
 INSERT INTO birthplaces (birthplace) VALUES ('in a field');
