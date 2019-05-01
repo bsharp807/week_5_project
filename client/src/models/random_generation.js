@@ -24,7 +24,7 @@ class RandomGeneration {
         return this.randomElfFirstName();
         break;
       case 'Human':
-        return this.randomHumanFirstName();
+        return this.randomHumanMaleFirstName();
         break;
       case 'Tiefling':
         return this.randomTieflingFirstName();
@@ -36,7 +36,7 @@ class RandomGeneration {
         return this.randomDragonbornFirstName();
         break;
       case 'Halfelf':
-        return this.randomHalfelfFirstName();
+        return this.randomHalfelfMaleFirstName();
         break;
       case 'Halfling':
         return this.randomHalflingFirstName();
