@@ -6,6 +6,7 @@ class GenerateFormView {
 
     this.hidden = document.querySelector('#hidden-generate');
     this.form = document.querySelector('#generate-form');
+    this.background = document.querySelector('#catch-all');
     this.firstNameRNG = document.querySelector('#firstNameRNG');
     this.lastNameRNG = document.querySelector('#lastNameRNG');
     this.ageRNG = document.querySelector('#ageRNG');
@@ -17,7 +18,6 @@ class GenerateFormView {
   bindEvents(rand) {
     this.form.addEventListener('submit', (evt) => {
       evt.preventDefault();
-
 
       const newChar = {};
       const input = evt.target;
@@ -51,7 +51,7 @@ class GenerateFormView {
       const npc = new NPC();
       npc.postData(newChar);
 
-      this.hidden.style.visibility = 'hidden';
+      this.updateStyle();
       this.form.reset();
     })
   }
@@ -84,6 +84,23 @@ class GenerateFormView {
     this.jobRNG.addEventListener('click', () => {
       this.form.jobs.value = rand.randomJob();
     })
+  }
+
+  updateStyle() {
+    this.formFade();
+    this.backgroundFadeIn();
+  }
+
+  formFade() {
+    this.hidden.style.transitionDelay = '0s';
+    this.hidden.classList.remove('fadeIn');
+    this.hidden.classList.add('fade');
+  }
+
+  backgroundFadeIn() {
+    this.background.style.transitionDelay = '0.8s';
+    this.background.classList.remove('fade');
+    this.background.classList.add('fadeIn');
   }
 }
 

@@ -8,16 +8,28 @@
 </head>
 
 <body>
-  <div class="headers">
-    <h1 class="overall-header" id="overall-header">D&D 5e NPC Generator</h1>
-    <h1 class="second-header" id="second-header">List of NPCs</h1>
-  </div>
+  <div class="mega-div">
+    <div class="catch-all" id="catch-all">
+      <div class="headers">
+        <h1 class="overall-header" id="overall-header">D&D 5e NPC Generator</h1>
+        <h1 class="second-header" id="second-header">List of NPCs</h1>
+      </div>
 
-  <div class="display-page" id="display-page">
-    <div class="initial-buttons">
-      <button type="button" id="generate-button" name="generate" class="initial-button">Generate</button>
-      <button type="button" id="random-button" name="random" class="initial-button">Random</button>
-      <button type="button" id="list-button" name="list" class="initial-button">List</button>
+      <div class="display-page" id="display-page">
+        <div class="initial-buttons">
+          <button type="button" id="generate-button" name="generate" class="initial-button">Generate</button>
+          <button type="button" id="random-button" name="random" class="initial-button">Random</button>
+          <button type="button" id="list-button" name="list" class="initial-button">List</button>
+        </div>
+        
+        <div id="display" class="display">
+        </div>
+      </div>
+
+      <div id="list-container" class="list-container">
+        <div id="list-display" class="list-display">
+        </div>
+      </div>
     </div>
 
     <div class="hidden-generate" id="hidden-generate">
@@ -113,16 +125,7 @@
       </form>
 
     </div>
-
-    <div id="display">
-    </div>
   </div>
-
-  <div id="list-container" class="list-container">
-    <div id="list-display" class="list-display">
-    </div>
-  </div>
-
 </body>
 
 </html>
