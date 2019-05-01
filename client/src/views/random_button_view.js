@@ -12,7 +12,19 @@ class RandomButtonView {
     this.element.addEventListener('click', (evt) => {
       const newChar = {};
       newChar.race = rand.randomRace();
-      newChar.first_name = rand.filteredFirstName(newChar.race);
+      newChar.gender = rand.randomGender();
+
+      switch(newChar.gender) {
+        case 'female':
+          newChar.first_name = rand.filteredFemaleFirstName(newChar.race);
+          break;
+        case 'male':
+          newChar.first_name = rand.filteredMaleFirstName(newChar.race);
+          break;
+        default:
+          return 'ERROR IN GENDERED NAME SWITCH';
+      }
+
       newChar.last_name = rand.filteredLastName(newChar.race);
       newChar.job = rand.randomJob();
       newChar.age = rand.randomAge();
@@ -30,6 +42,8 @@ class RandomButtonView {
       if (newChar.low_skill === newChar.high_skill) {
         newChar.low_skill = rand.randomSkill();
       }
+
+      console.log(newChar);
 
       const npc = new NPC();
       npc.postData(newChar);

@@ -15,7 +15,7 @@ class RandomGeneration {
     })
   }
 
-  filteredFirstName(race) {
+  filteredMaleFirstName(race) {
     switch(race){
       case 'Orc':
         return this.randomOrcFirstName();
@@ -37,6 +37,40 @@ class RandomGeneration {
         break;
       case 'Halfelf':
         return this.randomHalfelfFirstName();
+        break;
+      case 'Halfling':
+        return this.randomHalflingFirstName();
+        break;
+      case 'Gnome':
+        return this.randomGnomeFirstName();
+        break;
+      default:
+        return 'SWITCH ERROR FIRST NAME';
+    }
+  }
+
+  filteredFemaleFirstName(race) {
+    switch(race){
+      case 'Orc':
+        return this.randomOrcFirstName();
+        break;
+      case 'Elf':
+        return this.randomElfFirstName();
+        break;
+      case 'Human':
+        return this.randomHumanFemaleFirstName();
+        break;
+      case 'Tiefling':
+        return this.randomTieflingFirstName();
+        break;
+      case 'Dwarf':
+        return this.randomDwarfFirstName();
+        break;
+      case 'Dragonborn':
+        return this.randomDragonbornFirstName();
+        break;
+      case 'Halfelf':
+        return this.randomHalfelfFemaleFirstName();
         break;
       case 'Halfling':
         return this.randomHalflingFirstName();
@@ -95,9 +129,15 @@ class RandomGeneration {
     return firstName.name
   }
 
-  randomHumanFirstName() {
+  randomHumanFemaleFirstName() {
     const rng = new RNG();
-    const firstName = rng.randArray(this.data.human_names);
+    const firstName = rng.randArray(this.data.female_human_names);
+    return firstName.name
+  }
+
+  randomHumanMaleFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.male_human_names);
     return firstName.name
   }
 
@@ -125,9 +165,15 @@ class RandomGeneration {
     return firstName.name
   }
 
-  randomHalfelfFirstName() {
+  randomHalfelfFemaleFirstName() {
     const rng = new RNG();
-    const firstName = rng.randArray(this.data.halfelf_names);
+    const firstName = rng.randArray(this.data.female_halfelf_names);
+    return firstName.name
+  }
+
+  randomHalfelfMaleFirstName() {
+    const rng = new RNG();
+    const firstName = rng.randArray(this.data.male_halfelf_names);
     return firstName.name
   }
 
@@ -264,7 +310,8 @@ class RandomGeneration {
 
   randomGender() {
     const rng = new RNG();
-    const decider = rng.randNum(1,1);
+    const decider = rng.randNum(2,1);
+    console.log(decider);
     switch(decider) {
       case 1:
         return 'female';

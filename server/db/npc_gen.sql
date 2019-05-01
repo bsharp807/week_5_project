@@ -768,7 +768,7 @@ INSERT INTO birthplaces (birthplace) VALUES ('in tragic circumstances');
 INSERT INTO birthplaces (birthplace) VALUES ('into a broken family');
 INSERT INTO birthplaces (birthplace) VALUES ('into a loving family');
 INSERT INTO birthplaces (birthplace) VALUES ('in a field');
-INSERT INTO birthplaces (birthplace) VALUES ('on a barn');
+INSERT INTO birthplaces (birthplace) VALUES ('in a barn');
 INSERT INTO birthplaces (birthplace) VALUES ('in the slums');
 INSERT INTO birthplaces (birthplace) VALUES ('in the mountains');
 INSERT INTO birthplaces (birthplace) VALUES ('in the jungle');
