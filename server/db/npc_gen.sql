@@ -48,7 +48,8 @@ CREATE TABLE non_player_chars(
   ideal VARCHAR(1024),
   bond VARCHAR(1024),
   flaw VARCHAR(1024),
-  birthplace VARCHAR(1024)
+  birthplace VARCHAR(1024),
+  gender VARCHAR(255)
 );
 
 CREATE TABLE orc_names(
