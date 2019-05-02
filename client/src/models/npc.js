@@ -39,7 +39,7 @@ class NPC {
   }
 
   putData(npc) {
-    const url = `http://localhost:3000/npc/${this.id}`;
+    const url = `http://localhost:3000/npc/${npc.id}`;
     const request = new RequestHelper(url);
     request.put()
       .then((data) => {

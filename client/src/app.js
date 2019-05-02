@@ -7,6 +7,7 @@ const NpcDisplayView = require('./views/npc_display_view.js');
 const GenerateButtonView = require('./views/generate_button_view.js');
 const UpdateButtonView = require('./views/update_button_view.js');
 const GenerateFormView = require('./views/generate_form_view.js');
+const UpdateFormView = require('./views/update_form_view.js');
 const RandomButtonView = require('./views/random_button_view.js');
 const ListView = require('./views/list_view.js');
 const ListButtonView = require('./views/list_button_view.js');
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const generateButtonView = new GenerateButtonView();
   const updateButtonView = new UpdateButtonView();
   const generateFormView = new GenerateFormView();
+  const updateFormView = new UpdateFormView();
   const randomButtonView = new RandomButtonView();
   const listView = new ListView();
   const listButtonView = new ListButtonView();
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   generateButtonView.bindEvents();
 
+  updateButtonView.updateButtonListener();
   updateButtonView.bindEvents();
 
   randomGeneration.receiveTableData();
@@ -52,6 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
   generateFormView.raceRNGButton(randomGeneration);
   generateFormView.jobRNGButton(randomGeneration);
   generateFormView.cancelButton();
+
+  updateFormView.updateListen();
+
+  updateFormView.bindEvents(randomGeneration);
+  updateFormView.firstNameRNGButton(randomGeneration);
+  updateFormView.lastNameRNGButton(randomGeneration);
+  updateFormView.ageRNGButton(randomGeneration);
+  updateFormView.raceRNGButton(randomGeneration);
+  updateFormView.jobRNGButton(randomGeneration);
+  updateFormView.cancelButton();
 
   npc.getInitialDisplay();
   table.getTableData();

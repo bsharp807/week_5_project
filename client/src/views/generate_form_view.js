@@ -12,7 +12,7 @@ class GenerateFormView {
     this.ageRNG = document.querySelector('#ageRNG');
     this.raceRNG = document.querySelector('#raceRNG');
     this.jobRNG = document.querySelector('#jobRNG');
-    this.cancel = document.querySelector('#cancel');
+    this.cancel = document.querySelector('#cancel-button');
 
   }
 
