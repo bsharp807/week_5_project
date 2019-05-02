@@ -41,12 +41,21 @@ class NPC {
   putData(npc) {
     const url = `http://localhost:3000/npc/${npc.id}`;
     const request = new RequestHelper(url);
-    request.put()
+    request.put(npc)
       .then((data) => {
         this.data = data;
         PubSub.publish('NPC:initial-data-ready', this.data[0]);
       })
   }
+
+  deleteData(entry) {
+  const url = `http://localhost:3000/npc/${npc.id}`;
+  const request = new RequestHelper(url);
+  request.delete(entry)
+    .then((entries) => {
+      PubSub.publish('Swim-Times:DB-data-loaded', entries);
+    });
+}
 
 }
 

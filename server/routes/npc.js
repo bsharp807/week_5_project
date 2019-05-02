@@ -31,9 +31,9 @@ router.post('/', function(req, res) {
 
 //UPDATE single character
 router.put('/:id', function(req, res) {
-  SqlRunner.run('UPDATE non_player_chars SET first_name = $2, job = $3, age = $4, high_skill = $5, low_skill = $6 where id = $1', [req.params.id, req.body.name, req.body.job, req.body.age, req.body.high_skill, req.body.low_skill])
+  SqlRunner.run('UPDATE non_player_chars SET first_name = $2, last_name = $8, job = $3, age = $4, high_skill = $5, low_skill = $6, gender = $7 where id = $1', [req.params.id, req.body.first_name, req.body.job, req.body.age, req.body.high_skill, req.body.low_skill, req.body.gender, req.body.last_name])
     .then((name) => {
-      SqlRunner.run('SELECT * FROM non_player_chars')
+      SqlRunner.run('SELECT * FROM non_player_chars WHERE id = $1', [req.params.id])
         .then((result) => {
           res.status(201).json(result.rows)
         })
