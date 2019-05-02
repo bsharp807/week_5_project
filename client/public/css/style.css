@@ -184,7 +184,7 @@ input[type=text], input[type=number] {
   font-family: "Exo 2", verdana, sans-serif;
 }
 
-input[type=submit], #cancel-button {
+input[type=submit], #cancel-button, #delete-button {
   width: 50%;
   background-color: #2A74B1;
   color: white;
@@ -206,7 +206,7 @@ input[type=submit]:hover {
   background-color: #1C2E5A;
 }
 
-#cancel-button:hover {
+#cancel-button:hover, #delete-button:hover {
   background-color: #1C2E5A;
 }
 
@@ -289,8 +289,8 @@ option {
 }
 
 .update-form {
-  font-size: 0.8em;
-  height: 150%;
+  font-size: 0.75em;
+  height: 155%;
   width: 100%;
   background-color: white;
   border-style: solid;
