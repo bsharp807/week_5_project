@@ -264,7 +264,7 @@ class RandomGeneration {
 
   randomAge() {
     const rng = new RNG();
-    return rng.randNum(25, 14);
+    return rng.randNum(35, 14);
   }
 
   randomSkill() {
