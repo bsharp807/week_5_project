@@ -11,6 +11,7 @@ const UpdateFormView = require('./views/update_form_view.js');
 const RandomButtonView = require('./views/random_button_view.js');
 const ListView = require('./views/list_view.js');
 const ListButtonView = require('./views/list_button_view.js');
+const DeleteView = require('./views/delete_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('js has loaded');
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const randomButtonView = new RandomButtonView();
   const listView = new ListView();
   const listButtonView = new ListButtonView();
+  const deleteView = new DeleteView();
 
   npcDisplayView.bindEvents();
 
@@ -45,6 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
   updateButtonView.bindEvents();
 
   randomGeneration.receiveTableData();
+
+  deleteView.deleteListen();
+  deleteView.bindEvents();
+  deleteView.cancelConfirm();
 
   randomButtonView.bindEvents(randomGeneration);
 
@@ -65,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateFormView.raceRNGButton(randomGeneration);
   updateFormView.jobRNGButton(randomGeneration);
   updateFormView.cancelButton();
+  updateFormView.deleteButton();
 
   npc.getInitialDisplay();
   table.getTableData();

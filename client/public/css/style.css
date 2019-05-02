@@ -184,7 +184,7 @@ input[type=text], input[type=number] {
   font-family: "Exo 2", verdana, sans-serif;
 }
 
-input[type=submit], #cancel-button, #cancel-buttonUp, #delete-button {
+input[type=submit], #cancel-button, #cancel-buttonUp, #cancel-buttonDel, #delete-button {
   width: 50%;
   background-color: #2A74B1;
   color: white;
@@ -206,7 +206,7 @@ input[type=submit]:hover {
   background-color: #1C2E5A;
 }
 
-#cancel-button:hover, #cancel-buttonUp:hover, #delete-button:hover {
+#cancel-button:hover, #cancel-buttonUp:hover, #cancel-buttonDel:hover, #delete-button:hover {
   background-color: #1C2E5A;
 }
 
@@ -301,6 +301,45 @@ option {
   border-width: 1px;
   text-align: center;
   padding: 5px;
+}
+
+.hidden-delete {
+  position: fixed;
+  top: 30%;
+  z-index: 50;
+
+  text-align: center;
+
+  margin-top: 2%;
+  width: 35%;
+  margin-left: 29.3%;
+  margin-right: 10%;
+  padding: 1%;
+
+  height: 45%;
+
+  visibility: hidden;
+}
+
+
+.delete-form {
+  font-size: 0.75em;
+  height: 60%;
+  width: 110%;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  padding: 5px;
+}
+
+.hidden-delete.hide {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.hidden-delete.show {
+  visibility: visible;
 }
 
 .catch-all{

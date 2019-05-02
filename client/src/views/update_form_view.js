@@ -15,6 +15,9 @@ class UpdateFormView {
     this.jobRNG = document.querySelector('#jobRNGUp');
     this.cancel = document.querySelector('#cancel-buttonUp');
 
+    this.delete = document.querySelector('#delete-button');
+    this.confirm = document.querySelector('#hidden-delete');
+
     this.npc = null;
 
   }
@@ -99,8 +102,15 @@ class UpdateFormView {
   }
 
   cancelButton() {
-    this.cancel.addEventListener('click', () =>{
+    this.cancel.addEventListener('click', () => {
       this.updateStyle();
+    })
+  }
+
+  deleteButton() {
+    this.delete.addEventListener('click', () => {
+      this.showDelete();
+      PubSub.publish('UpdateFormView:data-for-delete', this.npc);
     })
   }
 
@@ -119,6 +129,11 @@ class UpdateFormView {
     this.background.style.transitionDelay = '0.8s';
     this.background.classList.remove('fade');
     this.background.classList.add('fadeIn');
+  }
+
+  showDelete() {
+    this.confirm.classList.remove('hide');
+    this.confirm.classList.add('show');
   }
 }
 
