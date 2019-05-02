@@ -226,6 +226,7 @@ INSERT INTO orc_names (name) VALUES ('Killa');
 INSERT INTO orc_names (name) VALUES ('Gazkhull');
 INSERT INTO orc_names (name) VALUES ('Fearow');
 INSERT INTO orc_names (name) VALUES ('Kong');
+INSERT INTO orc_names (name) VALUES ('Zubar');
 
 -- ORC SURNAMES
 
@@ -291,10 +292,19 @@ INSERT INTO female_human_names (name) VALUES ('Laherl');
 INSERT INTO female_human_names (name) VALUES ('Evelyn');
 INSERT INTO female_human_names (name) VALUES ('Dido');
 INSERT INTO female_human_names (name) VALUES ('Catherine');
+INSERT INTO female_human_names (name) VALUES ('Sally');
+INSERT INTO female_human_names (name) VALUES ('Jenny');
+INSERT INTO female_human_names (name) VALUES ('Julia');
+INSERT INTO female_human_names (name) VALUES ('Katie');
+INSERT INTO female_human_names (name) VALUES ('Esther');
+INSERT INTO male_human_names (name) VALUES ('Keith');
+INSERT INTO male_human_names (name) VALUES ('Isaac');
+INSERT INTO male_human_names (name) VALUES ('Keith');
 INSERT INTO male_human_names (name) VALUES ('Keith');
 INSERT INTO male_human_names (name) VALUES ('Bardem');
 INSERT INTO male_human_names (name) VALUES ('Blazes');
 INSERT INTO male_human_names (name) VALUES ('Frank');
+INSERT INTO male_human_names (name) VALUES ('Oswald');
 
 -- HUMAN SURNAMES
 
@@ -304,6 +314,7 @@ INSERT INTO human_surnames (name) VALUES ('Evensberg');
 INSERT INTO human_surnames (name) VALUES ('Bean');
 INSERT INTO human_surnames (name) VALUES ('Gettysville');
 INSERT INTO human_surnames (name) VALUES ('Stark');
+INSERT INTO human_surnames (name) VALUES ('Spencer');
 INSERT INTO human_surnames (name) VALUES ('Garbadour');
 INSERT INTO human_surnames (name) VALUES ('King');
 INSERT INTO human_surnames (name) VALUES ('Barrie');
@@ -317,6 +328,14 @@ INSERT INTO human_surnames (name) VALUES ('Klose');
 INSERT INTO human_surnames (name) VALUES ('Ospina');
 INSERT INTO human_surnames (name) VALUES ('Welstead');
 INSERT INTO human_surnames (name) VALUES ('Davies');
+INSERT INTO human_surnames (name) VALUES ('Jones');
+INSERT INTO human_surnames (name) VALUES ('Williams');
+INSERT INTO human_surnames (name) VALUES ('Moore');
+INSERT INTO human_surnames (name) VALUES ('Howard');
+INSERT INTO human_surnames (name) VALUES ('McIntyre');
+INSERT INTO human_surnames (name) VALUES ('Sharp');
+INSERT INTO human_surnames (name) VALUES ('Fanning');
+INSERT INTO human_surnames (name) VALUES ('Croak');
 
 -- TIEFLING NAMES
 
@@ -335,6 +354,9 @@ INSERT INTO tiefling_names (name) VALUES ('Plough');
 INSERT INTO tiefling_names (name) VALUES ('Greenfingers');
 INSERT INTO tiefling_names (name) VALUES ('Wordsmith');
 INSERT INTO tiefling_names (name) VALUES ('Barb');
+INSERT INTO tiefling_names (name) VALUES ('Instigator');
+INSERT INTO tiefling_names (name) VALUES ('Sleuth');
+INSERT INTO tiefling_names (name) VALUES ('Doc');
 
 -- TIEFLING SURNAMES
 
@@ -373,6 +395,9 @@ INSERT INTO dwarf_names (name) VALUES ('Barik');
 INSERT INTO dwarf_names (name) VALUES ('Hakwetelin');
 INSERT INTO dwarf_names (name) VALUES ('Rarfaerra');
 INSERT INTO dwarf_names (name) VALUES ('Grokregar');
+INSERT INTO dwarf_names (name) VALUES ('Givubo');
+INSERT INTO dwarf_names (name) VALUES ('Dwodruhilda');
+INSERT INTO dwarf_names (name) VALUES ('Kiggogaer');
 
 -- DWARF SURNAMES
 
@@ -386,6 +411,9 @@ INSERT INTO dwarf_surnames (name) VALUES ('Oakenshield');
 INSERT INTO dwarf_surnames (name) VALUES ('Platewearer');
 INSERT INTO dwarf_surnames (name) VALUES ('Swordbearer');
 INSERT INTO dwarf_surnames (name) VALUES ('Grandsmith');
+INSERT INTO dwarf_surnames (name) VALUES ('Twilightfury');
+INSERT INTO dwarf_surnames (name) VALUES ('Dragonmaster');
+INSERT INTO dwarf_surnames (name) VALUES ('Stronggrip');
 
 -- HALFELF NAMES
 
@@ -521,11 +549,13 @@ INSERT INTO gnome_names (name) VALUES ('Sloosyviss');
 INSERT INTO gnome_names (name) VALUES ('Pawemwec');
 INSERT INTO gnome_names (name) VALUES ('Mollbot');
 INSERT INTO gnome_names (name) VALUES ('Fnemmis');
-INSERT INTO gnome_names (name) VALUES ('Formaldihyde');
+INSERT INTO gnome_names (name) VALUES ('Formaldehyde');
 INSERT INTO gnome_names (name) VALUES ('Gebblis');
 INSERT INTO gnome_names (name) VALUES ('Slihere');
 INSERT INTO gnome_names (name) VALUES ('Fibonsmy');
 INSERT INTO gnome_names (name) VALUES ('Banzberort');
+INSERT INTO gnome_names (name) VALUES ('Lazlo');
+INSERT INTO gnome_names (name) VALUES ('Kruger');
 
 -- GNOME SURNAMES
 
@@ -538,6 +568,11 @@ INSERT INTO gnome_surnames (name) VALUES ('Rompelman');
 INSERT INTO gnome_surnames (name) VALUES ('Weersink');
 INSERT INTO gnome_surnames (name) VALUES ('Rumplestilkskin');
 INSERT INTO gnome_surnames (name) VALUES ('Achteresch');
+INSERT INTO gnome_surnames (name) VALUES ('Wilders');
+INSERT INTO gnome_surnames (name) VALUES ('van Bommel');
+INSERT INTO gnome_surnames (name) VALUES ('Cruyff');
+INSERT INTO gnome_surnames (name) VALUES ('Cech');
+INSERT INTO gnome_surnames (name) VALUES ('Kriezler');
 
 -- DRAGONBORN NAMES
 
