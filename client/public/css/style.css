@@ -253,6 +253,52 @@ option {
 
 }
 
+.hidden-update {
+  position: fixed;
+  top: 10%;
+  z-index: 50;
+
+  text-align: center;
+
+  margin-top: 2%;
+  width: 35%;
+  margin-left: 31%;
+  margin-right: 39%;
+  padding: 1%;
+
+  height: 45%;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.hidden-update.fadeIn {
+  transition: opacity 1.1s;
+  -webkit-transition: opacity 1.1s;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden-update.fade{
+  transition: opacity 0.75s;
+  -webkit-transition: opacity 0.75s;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.update-form {
+  font-size: 0.8em;
+  height: 150%;
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  padding: 5px;
+}
+
 .catch-all{
 
 }

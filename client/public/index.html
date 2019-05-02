@@ -19,6 +19,7 @@
         <div class="initial-buttons">
           <button type="button" id="generate-button" name="generate" class="initial-button">Generate</button>
           <button type="button" id="random-button" name="random" class="initial-button">Random</button>
+          <button type="button" id="update-button" name="update" class="initial-button">Update</button>
           <button type="button" id="list-button" name="list" class="initial-button">List</button>
         </div>
 
@@ -116,6 +117,109 @@
         <div id="submit">
           <div class="submit">
             <input type="submit" name="submit" id="submit-button" class="submit-button" value="Submit" />
+          </div>
+        </div>
+
+        <div id="cancel">
+          <div class="cancel-button">
+            <button type="button" name="cancel" id="cancel-button">Cancel</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+    <div class="hidden-update" id="hidden-update">
+
+      <form autocomplete="off" class="update-form" id="update-form">
+        <div class="form-header">
+          <h1>NPC Generation Form</h1>
+        </div>
+
+        <div id="firstName">
+          <div class="text-input">
+            <label for="firstName">First Name<label>
+              <input type="text" name="firstName" />
+              <input type="button" name="firstNameRNG" value="Random" id="firstNameRNG" />
+          </div>
+        </div>
+
+        <div id="lastName">
+          <div class="text-input">
+            <label for="lastName">Last Name<label>
+              <input type="text" name="lastName" />
+              <input type="button" name="lastNameRNG" value="Random" id="lastNameRNG" />
+          </div>
+        </div>
+
+        <div id="age">
+          <div class="number-input">
+            <label for="age">Age<label>
+              <input type="number" name="age" min="14" value="24" />
+              <input type="button" name="ageRNG" value="Random" id="ageRNG" />
+          </div>
+        </div>
+
+        <div id="race">
+          <div class="dropdown-input">
+            <label for="race">Race<label>
+              <select name="race" id="race-select">
+
+                <option value="Dwarf">Dwarf</option>
+                <option value="Dragonborn">Dragonborn</option>
+                <option value="Elf">Elf</option>
+                <option value="Gnome">Gnome</option>
+                <option value="Halfelf">Halfelf</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Human">Human</option>
+                <option value="Orc">Orc</option>
+                <option value="Tiefling">Tiefling</option>
+
+              </select>
+              <input type="button" name="raceRNG" value="Random" id="raceRNG" />
+          </div>
+        </div>
+
+        <div id="jobs">
+          <div class="dropdown-input">
+            <label for="jobs">Class<label>
+              <select name="jobs" id="jobs-select">
+
+                <option value="Barbarian">Barbarian</option>
+                <option value=<"Bard">Bard</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Druid">Druid</option>
+                <option value="Fighter">Fighter</option>
+                <option value="Monk">Monk</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Ranger">Ranger</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Sorceror">Sorceror</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Wizard">Wizard</option>
+
+              </select>
+              <input type="button" name="jobRNG" value="Random" id="jobRNG" />
+          </div>
+        </div>
+
+        <div id="gender">
+          <div class="radio-input">
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="male">Male
+          </div>
+        </div>
+
+        <div id="submit">
+          <div class="submit">
+            <input type="submit" name="submit" id="submit-button" class="submit-button" value="Submit" />
+          </div>
+        </div>
+
+        <div id="delete">
+          <div class="delete-button">
+            <button type="button" name="delete" id="delete-button">Cancel</button>
           </div>
         </div>
 
