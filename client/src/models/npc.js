@@ -48,12 +48,12 @@ class NPC {
       })
   }
 
-  deleteData(entry) {
+  deleteData(npc) {
   const url = `http://localhost:3000/npc/${npc.id}`;
   const request = new RequestHelper(url);
-  request.delete(entry)
-    .then((entries) => {
-      PubSub.publish('Swim-Times:DB-data-loaded', entries);
+  request.delete(npc)
+    .then((data) => {
+      PubSub.publish('NPC:initial-data-ready', this.data[0]);
     });
 }
 

@@ -40,4 +40,15 @@ router.put('/:id', function(req, res) {
     })
 })
 
+//DELETE single character
+router.delete('/:id', function(req, res) {
+  SqlRunner.run('DELETE FROM non_player_chars WHERE id = $1', [req.params.id])
+    .then((result) => {
+      SqlRunner.run('SELECT * FROM non_player_chars WHERE id = 1')
+        .then((name) => {
+          res.status(201).json(name.rows);
+        })
+    })
+})
+
 module.exports = router;
