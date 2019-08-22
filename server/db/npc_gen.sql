@@ -1,38 +1,4 @@
-DROP TABLE non_player_chars;
 
-DROP TABLE orc_names;
-DROP TABLE orc_surnames;
-DROP TABLE elf_names;
-DROP TABLE elf_surnames;
-DROP TABLE female_human_names;
-DROP TABLE male_human_names;
-DROP TABLE human_surnames;
-DROP TABLE tiefling_names;
-DROP TABLE tiefling_surnames;
-DROP TABLE dwarf_names;
-DROP TABLE dwarf_surnames;
-DROP TABLE dragonborn_names;
-DROP TABLE dragonborn_surnames;
-DROP TABLE gnome_names;
-DROP TABLE gnome_surnames;
-DROP TABLE female_halfelf_names;
-DROP TABLE male_halfelf_names;
-DROP TABLE halfelf_surnames;
-DROP TABLE halfling_names;
-DROP TABLE halfling_surnames;
-
-DROP TABLE races;
-DROP TABLE jobs;
-DROP TABLE skills;
-
-DROP TABLE traits;
-DROP TABLE appearances;
-DROP TABLE talents;
-DROP TABLE mannerisms;
-DROP TABLE ideals;
-DROP TABLE bonds;
-DROP TABLE flaws;
-DROP TABLE birthplaces;
 
 CREATE TABLE non_player_chars(
   id SERIAL8 PRIMARY KEY,
