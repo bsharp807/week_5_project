@@ -12,6 +12,8 @@ services:
     working_dir: /client
     depends_on:
       - database
+    environment:
+      FRONT_END_PORT: "${FRONT_END_PORT}"
 
   server:
     image: node:11-alpine
