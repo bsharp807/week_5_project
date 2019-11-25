@@ -6,7 +6,7 @@ services:
     entrypoint: ash
     command: " -c 'npm i && npm start' "
     ports:
-      - 3001:3001
+      - 23456:23456
     volumes:
       - ./client:/client
     working_dir: /client
