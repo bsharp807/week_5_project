@@ -20,10 +20,12 @@ services:
     entrypoint: ash
     command: " -c 'npm run server:dev' "
     ports:
-      - 3000:3000
+      - "${BACK_END_PORT}:${BACK_END_PORT}"
     volumes: 
       - ./server:/server
     working_dir: /server
+    environment:
+      BACK_END_PORT: "${BACK_END_PORT}"
 
   database:
     image: postgres:11.5-alpine
