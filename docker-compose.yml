@@ -9,6 +9,7 @@ services:
       - "${FRONT_END_PORT}:${FRONT_END_PORT}"
     volumes:
       - ./client:/client
+      - ./.env:/client/.env
     working_dir: /client
     depends_on:
       - database
