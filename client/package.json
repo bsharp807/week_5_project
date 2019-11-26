@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "node server.js"
+    "start": "node server.js",
+    "docker":"docker-compose up",
+    "force": "docker-compose up --force-recreate"
   },
   "keywords": [],
   "author": "",
