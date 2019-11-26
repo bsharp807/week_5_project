@@ -10,7 +10,7 @@ class Table {
   }
 
   getTableData() {
-    const url = `http://localhost:3000/output/`;
+    const url = `${process.env.BACK_END_URL}${process.env.BACK_END_PORT}/output/`;
     const request = new RequestHelper(url);
     request.get()
       .then((output) => {

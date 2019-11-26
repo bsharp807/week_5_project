@@ -4,24 +4,30 @@ services:
   client:
     image: node:11-alpine
     entrypoint: ash
-    command: " -c 'npm i && npm start' "
+    command: " -c 'npm run build && npm start' "
     ports:
-      - 3001:3001
+      - "${FRONT_END_PORT}:${FRONT_END_PORT}"
     volumes:
       - ./client:/client
+      - ./.env:/client/.env
     working_dir: /client
     depends_on:
       - database
+    environment:
+      FRONT_END_PORT: "${FRONT_END_PORT}"
+      BACK_END_PORT: "${BACK_END_PORT}"
 
   server:
     image: node:11-alpine
     entrypoint: ash
-    command: " -c 'npm i && npm run server:dev' "
+    command: " -c 'npm run server:dev' "
     ports:
-      - 3000:3000
+      - "${BACK_END_PORT}:${BACK_END_PORT}"
     volumes: 
       - ./server:/server
     working_dir: /server
+    environment:
+      BACK_END_PORT: "${BACK_END_PORT}"
 
   database:
     image: postgres:11.5-alpine

@@ -16,7 +16,7 @@ class List {
   }
 
   getListData() {
-    const url = `http://localhost:3000/npc/`
+    const url = `http://localhost:${process.env.BACK_END_PORT}/npc/`
     const request = new RequestHelper(url);
     request.get()
       .then((data) => {
