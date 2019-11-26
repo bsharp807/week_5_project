@@ -14,7 +14,7 @@ const ListButtonView = require('./views/list_button_view.js');
 const DeleteView = require('./views/delete_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('js has loaded');
+  console.log(process.env.BACK_END_PORT);
 
   const npc = new NPC();
   const table = new Table();
