@@ -11,7 +11,8 @@ class NPC {
   }
 
   getInitialDisplay() {
-    const url = `http://localhost:3000/npc/${this.id}`;
+    const url = `http://localhost:${process.env.BACK_END_PORT}/npc/${this.id}`;
+    console.log(url);
     const request = new RequestHelper(url);
     request.get()
       .then((data) => {
@@ -28,7 +29,7 @@ class NPC {
   }
 
   postData(npc) {
-    const url = `http://localhost:3000/npc/`
+    const url = `http://localhost:${process.env.BACK_END_PORT}/npc/`
     const request = new RequestHelper(url);
     request.post(npc)
       .then((data) => {
@@ -39,7 +40,7 @@ class NPC {
   }
 
   putData(npc) {
-    const url = `http://localhost:3000/npc/${npc.id}`;
+    const url = `http://localhost:${process.env.BACK_END_PORT}/npc/${npc.id}`;
     const request = new RequestHelper(url);
     request.put(npc)
       .then((data) => {
@@ -49,7 +50,7 @@ class NPC {
   }
 
   deleteData(npc) {
-  const url = `http://localhost:3000/npc/${npc.id}`;
+  const url = `http://localhost:${process.env.BACK_END_PORT}/npc/${npc.id}`;
   const request = new RequestHelper(url);
   request.delete(npc)
     .then((data) => {

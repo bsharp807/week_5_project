@@ -4,7 +4,7 @@ services:
   client:
     image: node:11-alpine
     entrypoint: ash
-    command: " -c 'npm start' "
+    command: " -c 'npm i && npm run build && npm start' "
     ports:
       - "${FRONT_END_PORT}:${FRONT_END_PORT}"
     volumes:
@@ -14,11 +14,12 @@ services:
       - database
     environment:
       FRONT_END_PORT: "${FRONT_END_PORT}"
+      BACK_END_PORT: "${BACK_END_PORT}"
 
   server:
     image: node:11-alpine
     entrypoint: ash
-    command: " -c 'npm run server:dev' "
+    command: " -c 'npm i && npm run server:dev' "
     ports:
       - "${BACK_END_PORT}:${BACK_END_PORT}"
     volumes: 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack -w",
+    "build": "webpack",
     "start": "node server.js"
   },
   "keywords": [],
@@ -15,8 +15,8 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.1",
     "jest": "^24.5.0"
   }
 }
