@@ -14,7 +14,7 @@ const ListButtonView = require('./views/list_button_view.js');
 const DeleteView = require('./views/delete_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('backend port is', process.env.BACK_END_PORT);
+  console.log('backend port is', process.env.BACK_END_PORT, '. backend url is', process.env.BACK_END_URL);
 
   const npc = new NPC();
   const table = new Table();
