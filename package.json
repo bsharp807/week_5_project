@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "docker-compose up",
+    "start": "docker-compose up -d -build",
     "down": "docker-compose down",
-    "force": "docker-compose up --force-recreate"
+    "force": "docker-compose up -d -build --force-recreate"
   }
 }
