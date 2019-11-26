@@ -12,7 +12,6 @@ var SqlRunner = require('../db/sql_runner');
 //         SqlRunner.run(`SELECT * FROM ${detail}`)
 //           .then((entries) => {
 //             allData[detail] = entries.rows;
-//             // console.log(allData);
 //           })
 //       })
 //

@@ -12,7 +12,6 @@ class NPC {
 
   getInitialDisplay() {
     const url = `http://localhost:${process.env.BACK_END_PORT}/npc/${this.id}`;
-    console.log(url);
     const request = new RequestHelper(url);
     request.get()
       .then((data) => {

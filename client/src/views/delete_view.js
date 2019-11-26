@@ -19,7 +19,6 @@ class DeleteView {
   deleteListen() {
     PubSub.subscribe('UpdateFormView:data-for-delete', (evt) => {
       this.npc = evt.detail;
-      console.log(this.npc);
     })
   }
 
